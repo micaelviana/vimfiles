@@ -2,6 +2,7 @@
 * Apagar a pasta nvim do sistema: rm -rf ~/.config/nvim
 
 * Clonar este repositório: 
+
    cd ~/.config
 
    git clone https://github.com/micaelviana/nvim
