@@ -3,6 +3,7 @@
 
 * Clonar este repositório: 
    cd ~/.config
+
    git clone https://github.com/micaelviana/nvim
 
 * Instalar o vim-plug
