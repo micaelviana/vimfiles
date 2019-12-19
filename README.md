@@ -1,7 +1,9 @@
 # nvim
 * Apagar a pasta nvim do sistema: rm -rf ~/.config/nvim
 
-* Clonar este repositório: git clone https://github.com/micaelviana/nvim
+* Clonar este repositório: 
+   cd ~/.config
+   git clone https://github.com/micaelviana/nvim
 
 * Instalar o vim-plug
 ------Caminho para o plug-vim------
