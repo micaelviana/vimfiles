@@ -43,7 +43,9 @@ call plug#end()
 "Definicao de tema
 "begin
 syntax on
-set termguicolors
+if has('termguicolors')
+    set termguicolors
+endif
 colorscheme onedark
 
 "colorscheme night-owl
