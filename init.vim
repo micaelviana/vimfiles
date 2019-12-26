@@ -1,61 +1,63 @@
-"ACESSE O GIT DE CADA UMA PRA VER SE AINDA ESTAO FUNCIONANDO E QUAIS OS
-"REQUISITOS
-"Vai permitir o cadastro dos plugins do vim-plug"
-"Pra instalar eh Plug usuarioGithub/repositorio"
-"Sobre os plugins. vim-sensible nao faco ideia, veio de exemplo.
-"Night owl, onehalf sao temas 
-"vim-polyglot eh para reconhecer sintaxe de diversas linguagens
-"fzf permite mostrar os arquivos do meu diretorio de forma rapida usando :Files
-"auto-pairs completa parenteses, chaves, essas coisas
-"rainbow vai colorir os parenteses e chaves e demais
-"Ultisnips permite a criacao de snippets. Requer uma certa configuracao
-"vim-snippets tem definicoes de snippets. Auxilia o Ulti
-"A instalacao do deoplete para autocomplete tem seu proprio bloco
-"Lightline configura a barra de status
-"NERDTree permite usar uma barra lateral no VIM. Eh bastante util
-"Nerdcommenter eh para funcoes de comentarios
-"Mips eh um arquivo de sintaxe para codigos da arquitetura mips
 call plug#begin()
-"Ja tem o OneDark mas vou deixar o Onehalf pelo tema light dele
-"Onedark colore melhor a sintaxe do que o Onehalf
+"Temas
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
-Plug 'arcticicestudio/nord-vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
-Plug 'tpope/vim-sensible'
-Plug 'sheerun/vim-polyglot'
+
+"Autocompletar parenteses
+Plug 'jiangmiao/auto-pairs'
+
+"Coloracao para pares de parenteses
+Plug 'oblitum/rainbow'
+
+"Barra inferior
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+"Barra lateral
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+"Navegacao com o TMUX
+Plug 'christoomey/vim-tmux-navigator'
+
+"Procurar arquivos com Ctrl-P como no VSCode
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'oblitum/rainbow'
-Plug 'sirver/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'itchyny/lightline.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
+
+"Pacote de sintaxe de linguagens
+Plug 'sheerun/vim-polyglot'
+
+"Sintaxe para assembly com arquitetura MIPS
 Plug 'vim-scripts/mips.vim'
+
+"Pacote de snippets
+Plug 'honza/vim-snippets'
+
+"Criar novos snippets
+Plug 'sirver/ultisnips'
+
+"Autocomplete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+"Assistente para comentários
+Plug 'scrooloose/nerdcommenter'
+
 call plug#end()
 "Depois de adicionar um plugin execute o comando :PlugInstall"
 
 
 "Definicao de tema
-"begin
 syntax on
 if has('termguicolors')
     set termguicolors
 endif
 colorscheme onedark
 
-"colorscheme night-owl
-"Definicao do tema gruvbox
-"colorscheme gruvbox
-"set background=dark
 "Definicao do tema Onehalf
 "colorscheme onehalfdark
-
-"end
+"or
+"colorscheme onehalflight
 
 "Permite a navegacao entre arquivos sem ter que salvar as alteracoes antes de ir para um arquivo diferente"
 set hidden
@@ -79,9 +81,6 @@ endif
 
 "Definir tecla principal dos atalhos"
 let mapleader = "\<space>"
-
-"Ao apertar space+ls ele lista os arquivos do diretorio atual e da um esc"
-nnoremap <leader>ls :!ls<esc>
 
 "Ao digitar CTRL+P Vai executar esse comando e dar um enter. :Files mostra os
 "arquivos do meu projeto
@@ -107,9 +106,8 @@ map <C-a> <esc>ggVG<CR>
 nnoremap<C-S-d> yyp
 
 
-"Atalhos para o NERDTree: ativar e desativar
-nnoremap<c-k> :NERDTree <cr> 
-nnoremap<c-b> :NERDTreeClose <cr>
+"Atalho para o NERDTree: ativar e desativar
+nmap <C-n> :NERDTreeToggle<CR>
 
 "Setar split para direita no vertical e para baixo no split horizontal
 set splitbelow
@@ -136,16 +134,6 @@ let g:UltiSnipsSnippetsEdit = '~/.config/nvim/UltiSnips'
 "	$0
 "}
 "endsnippet
-
-"------------------CONFIGURACOES LIGHTLINE------------------------
-"Impedir que o modo de insercao apareca duplicado
-set noshowmode
-
-"Selecionar colorscheme
-let g:lightline = {
-      \ 'colorscheme': 'one',
-      \ }
-
 
 "Copiando do vim para o clipboard
 "O que acontece aqui eh que o Vim tem duas areas de colagem. Uma para o Vim e
@@ -191,6 +179,11 @@ let g:rainbow_active = 1
 "O mips.vim nao vem com essa configuracao
 au BufNewFile,BufRead *.s,*.S set filetype=mips
 
+"------------------CONFIGURACOES AIRLINE------------------------
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_theme='deus'
 
 
 "------------------CONFIGURACOES TAB/SPACE------------------------
