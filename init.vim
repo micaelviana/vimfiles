@@ -105,6 +105,10 @@ map <C-a> <esc>ggVG<CR>
 "Duplicar a linha como nos outros editores
 nnoremap<C-S-d> yyp
 
+"Trocar duas linhas de lugar
+nnoremap <silent><C-Up> :let save_a=@a<Cr><Up>"add"ap<Up>:let @a=save_a<Cr>
+nnoremap <silent><C-Down> :let save_a=@a<Cr>"add"ap:let @a=save_a<Cr>
+
 
 "Atalho para o NERDTree: ativar e desativar
 nmap <C-n> :NERDTreeToggle<CR>
@@ -180,7 +184,7 @@ let g:rainbow_active = 1
 au BufNewFile,BufRead *.s,*.S set filetype=mips
 
 "------------------CONFIGURACOES AIRLINE------------------------
-
+set noshowmode
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme='deus'
