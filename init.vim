@@ -71,6 +71,11 @@ set relativenumber
 "Habilita interacao com o mouse "
 set mouse=a
 
+"Se você procurar por algo que contenha caracteres maiúsculos, isto irá fazer uma pesquisa case sensitive; 
+"se você procurar por algo puramente minúsculo isto irá fazer uma pesquisa case insensitive
+"Também pode forçar case insensitive com  \c e case sensitive com \C 
+set smartcase
+
 "Habilita preview de comando"
 if has('nvim')
     set inccommand=split
