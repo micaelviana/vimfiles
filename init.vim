@@ -71,10 +71,8 @@ set relativenumber
 "Habilita interacao com o mouse "
 set mouse=a
 
-"Se você procurar por algo que contenha caracteres maiúsculos, isto irá fazer uma pesquisa case sensitive; 
-"se você procurar por algo puramente minúsculo isto irá fazer uma pesquisa case insensitive
-"Também pode forçar case insensitive com  \c e case sensitive com \C 
-set smartcase
+"Ativa case insensitive por padrão
+set ignorecase
 
 "Habilita preview de comando"
 if has('nvim')
@@ -132,9 +130,6 @@ let g:UltiSnipsEditSplit='vertical'
 "essa configuracao eh o diretorio onde vao ficar os arquivos de snippets
 let g:UltiSnipsSnippetsEdit = '~/.config/nvim/UltiSnips'
 
-"Eu so consegui criar snippets navegando ate o endereco acima e criando
-"manualmente o arquivo linguagem.snippets. Exemplo: cpp.snippets
-
 ":UltiSnipsEdit permite a criacao de um novo snippet
 
 "escopo da criacao de um snippet
@@ -143,7 +138,7 @@ let g:UltiSnipsSnippetsEdit = '~/.config/nvim/UltiSnips'
 "	$0
 "}
 "endsnippet
-
+"-----------------------------------
 "Copiando do vim para o clipboard
 "O que acontece aqui eh que o Vim tem duas areas de colagem. Uma para o Vim e
 "outra para o sistema :-(
