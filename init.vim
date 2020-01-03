@@ -68,6 +68,9 @@ set number
 "Habilita a linha relativa, o deslocamento da linha atual ate a linha x"
 set relativenumber
 
+"Destacar linha que contém o cursor
+set cursorline
+
 "Habilita interacao com o mouse "
 set mouse=a
 
@@ -106,7 +109,7 @@ nnoremap <c-x> :q <cr>
 map <C-a> <esc>ggVG<CR>
 
 "Duplicar a linha como nos outros editores
-nnoremap<C-S-d> yyp
+nnoremap<C-d> yyp
 
 "Trocar duas linhas de lugar
 nnoremap <silent><C-Up> :let save_a=@a<Cr><Up>"add"ap<Up>:let @a=save_a<Cr>
