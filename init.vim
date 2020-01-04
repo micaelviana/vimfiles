@@ -192,11 +192,6 @@ let g:webdevicons_enable_airline_statusline = 1
 "Fechar aba aberta
 nnoremap<C-w> :bdelete <cr>
 
-
-"------------------CONFIGURACOES CTRLP------------------------
-let g:webdevicons_enable_ctrlp = 1
-
-
 "------------------CONFIGURACOES TAB/SPACE------------------------
 set tabstop=4       " The width of a TAB is set to 4.
                     " Still it is a \t. It is just that
