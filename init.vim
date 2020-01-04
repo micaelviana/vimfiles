@@ -3,6 +3,9 @@ call plug#begin()
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'joshdick/onedark.vim'
 
+"Icones no VIM
+Plug 'ryanoasis/vim-devicons'
+
 "Autocompletar parenteses
 Plug 'jiangmiao/auto-pairs'
 
@@ -21,9 +24,8 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 "Navegacao com o TMUX
 Plug 'christoomey/vim-tmux-navigator'
 
-"Procurar arquivos com Ctrl-P como no VSCode
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
+"Se funcionar vai ser um Fuzzy File Finder
+Plug 'ctrlpvim/ctrlp.vim'
 
 "Pacote de sintaxe de linguagens
 Plug 'sheerun/vim-polyglot'
@@ -88,12 +90,6 @@ endif
 "Definir tecla principal dos atalhos"
 let mapleader = "\<space>"
 
-"Ao digitar CTRL+P Vai executar esse comando e dar um enter. :Files mostra os
-"arquivos do meu projeto
-"Vai ser executado no modo de comando. No modo de insercao CTRL+P da
-"autocomplete
-nnoremap<c-p> :Files <cr>
-
 "Ao pressionar CTRL+F ele aciona o buscador Ag: e da espaco pra buscar um
 "termo em todo o diretorio atual de trabalho. CUIDADO AG FAZ PARTE DO SILVER-SEARCHER. TEM QUE ESTAR INSTALADO PRA
 "DAR CERTO
@@ -107,9 +103,6 @@ nnoremap <c-x> :q <cr>
 
 "Ctrl+a - para selecionar tudo
 map <C-a> <esc>ggVG<CR>
-
-"Duplicar a linha como nos outros editores
-nnoremap<C-d> yyp
 
 "Trocar duas linhas de lugar
 nnoremap <silent><C-Up> :let save_a=@a<Cr><Up>"add"ap<Up>:let @a=save_a<Cr>
@@ -192,8 +185,16 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme='deus'
 
+"configuracoes para usar com devicons
+let g:webdevicons_enable_airline_tabline = 1
+let g:webdevicons_enable_airline_statusline = 1
+
 "Fechar aba aberta
 nnoremap<C-w> :bdelete <cr>
+
+
+"------------------CONFIGURACOES CTRLP------------------------
+let g:webdevicons_enable_ctrlp = 1
 
 
 "------------------CONFIGURACOES TAB/SPACE------------------------
