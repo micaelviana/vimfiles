@@ -192,8 +192,6 @@ let g:airline_theme='deus'
 let g:webdevicons_enable_airline_tabline = 1
 let g:webdevicons_enable_airline_statusline = 1
 
-"Fechar aba aberta
-nnoremap<C-w> :bdelete <cr>
 
 "------------------CONFIGURACOES TAB/SPACE------------------------
 set tabstop=4       " The width of a TAB is set to 4.
