@@ -181,8 +181,6 @@ au BufNewFile,BufRead *.s,*.S set filetype=mips
 
 "------------------CONFIGURACOES AIRLINE------------------------
 set noshowmode
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme='deus'
 
 "configuracoes para usar com devicons
