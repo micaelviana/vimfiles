@@ -15,6 +15,4 @@ Este é um diretório de configurações para o Neovim. Inclui extensões, atalh
 
    ```curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim```
 
-   Note que a pasta foi eu que defini ate o /autoload:
-
 * Abrir o Neovim e no modo de Comando digitar: PlugInstall
