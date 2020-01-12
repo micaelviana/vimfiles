@@ -1,4 +1,4 @@
-# nvim
+# Neovim
 Este é um diretório de configurações para o Neovim. Inclui extensões, atalhos e snippets. A ideia é clonar esta pasta e utilizar essas configurações.
 
 1. Apagar a pasta nvim do sistema (caso você ja tenha uma configuração anterior): 
