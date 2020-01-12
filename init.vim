@@ -195,6 +195,8 @@ let g:webdevicons_enable_airline_statusline = 1
 
 
 "------------------CONFIGURACOES TAB/SPACE------------------------
+
+"Tópico em : https://stackoverflow.com/questions/1878974/redefine-tab-as-4-spaces
 set tabstop=4       " The width of a TAB is set to 4.
                     " Still it is a \t. It is just that
                     " Vim will interpret it to be having
