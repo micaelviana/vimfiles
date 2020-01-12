@@ -2,6 +2,7 @@ call plug#begin()
 "Temas
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'joshdick/onedark.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 "Icones no VIM
 Plug 'ryanoasis/vim-devicons'
@@ -54,7 +55,7 @@ syntax on
 if has('termguicolors')
     set termguicolors
 endif
-colorscheme onedark
+colorscheme dracula
 
 "Definicao do tema Onehalf
 "colorscheme onehalfdark
