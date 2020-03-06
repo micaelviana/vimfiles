@@ -25,7 +25,9 @@ Se você por algum motivo chegou aqui, quem sabe não segue as instruções e ex
 ## Dependências
 
 A extensão **Deoplete** precisa que o Neovim esteja na versão 0.3.0+ e que o módulo **msgpack** do Python esteja na versão 1.0.0+.
+
 Instalação e atualização do ```msgpack```:
 
    ```pip3 install msgpack```
+   
    ```pip3 install msgpack --upgrade```
