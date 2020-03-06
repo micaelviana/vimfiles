@@ -1,7 +1,9 @@
 # Neovim
-Este é um diretório de configurações para o Neovim. Inclui extensões, atalhos e snippets. A ideia é clonar esta pasta e utilizar essas configurações.
+Este é um diretório de configurações básicas para o uso do Neovim. Inclui extensões, atalhos e snippets. A ideia é clonar este repositório e utilizar essas configurações. Eu fiz esse repositório pensando em comodidade para mim, e poderia usar o Gist Github, mas aí os Snippets não viriam junto. 🤷‍
 
-##Instruções
+Se você por algum motivo chegou aqui, quem sabe não segue as instruções e experimenta.
+
+## Instruções
 
 1. Apagar a pasta nvim do sistema (caso você ja tenha uma configuração anterior): 
 
@@ -18,3 +20,12 @@ Este é um diretório de configurações para o Neovim. Inclui extensões, atalh
    ```curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim```
 
 4. Abrir o Neovim no Terminal e no modo de Comando digitar ```:PlugInstall```
+
+
+## Dependências
+
+A extensão **Deoplete** precisa que o Neovim esteja na versão 0.3.0+ e que o módulo **msgpack** do Python esteja na versão 1.0.0+.
+Instalação e atualização do ```msgpack```:
+
+   ```pip3 install msgpack```
+   ```pip3 install msgpack --upgrade```
