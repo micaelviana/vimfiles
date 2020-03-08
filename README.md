@@ -1,5 +1,5 @@
 # Neovim
-Este é um diretório de configurações básicas para o uso do Neovim. Inclui extensões, atalhos e snippets. A ideia é clonar este repositório e utilizar essas configurações. Eu fiz esse repositório pensando em comodidade para mim, e poderia usar o Gist Github, mas aí os Snippets não viriam junto. 🤷‍
+Este é um diretório de configurações básicas para o uso do Neovim. Inclui extensões, atalhos e snippets. A ideia é clonar este repositório e utilizar essas configurações. Eu fiz esse repositório pensando em comodidade para mim.
 
 Se você por algum motivo chegou aqui, quem sabe não segue as instruções e experimenta.
 
