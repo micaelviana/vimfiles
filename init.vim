@@ -83,14 +83,13 @@ set inccommand=split
 let mapleader = "\<space>"
 
 "Ao pressionar CTRL+F ele aciona o buscador Ag: e da espaco pra buscar um
-"termo em todo o diretorio atual de trabalho. CUIDADO AG FAZ PARTE DO SILVER-SEARCHER. TEM QUE ESTAR INSTALADO PRA
-"DAR CERTO
+"termo em todo o diretorio atual de trabalho. Precisa do pacote silver-searcher instalado
 nnoremap <c-f> :Ag<space>
 
-"Ao pressionar CTRL+S ele salva o arquivo. No modo de comando
+"Ao pressionar CTRL+S ele salva o arquivo
 nnoremap <c-s> :w <cr>
 
-""Ao pressionar CTRL+X ele salva fecha o arquivo.No modo de comando
+""Ao pressionar CTRL+X ele salva fecha o arquivo.
 nnoremap <c-x> :wq <cr>
 
 "Ctrl+a - para selecionar tudo
@@ -128,14 +127,11 @@ let g:UltiSnipsSnippetsEdit = '~/.config/nvim/UltiSnips'
 "endsnippet
 "-----------------------------------
 "Copiando do vim para o clipboard
-"O que acontece aqui eh que o Vim tem duas areas de colagem. Uma para o Vim e
-"outra para o sistema :-(
-"Habilitamos CTRL+C como atalho pra copiar do vim para o sistema e CTRL+V para
-"copiar o que vem do sistema para o VIM.
-"As configuracoes setados abaixo ja habilitam a 'colagem' do clipboard para o
-"VIM. Mas, vou manter as configuracoes de map porque aprendi assim
+"O Vim tem duas areas de colagem. Uma para o Vim e
+"outra para o sistema
+"Habilitar CTRL+C como atalho pra copiar do vim para o sistema
 "
-"
+
 vnoremap <C-c> "+y
 
 set clipboard=unnamedplus
@@ -173,22 +169,7 @@ let airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#formatter ='unique_tail_improved'
 let g:airline_theme='deus'
 
-"configuracoes para usar com devicons
-let g:webdevicons_enable_airline_tabline = 1
-let g:webdevicons_enable_airline_statusline = 1
-
 
 "------------------CONFIGURACOES TAB/SPACE------------------------
 
-"Tópico em : https://stackoverflow.com/questions/1878974/redefine-tab-as-4-spaces
-set tabstop=2       " The width of a TAB is set to 4.
-                    " Still it is a \t. It is just that
-                    " Vim will interpret it to be having
-                    " a width of 4.
-
-set shiftwidth=2    " Indents will have a width of 4
-
-set softtabstop=2   " Sets the number of columns for a TAB
-
-set expandtab       " Expand TABs to spaces
-
+set expandtab softtabstop=2 shiftwidth=2
