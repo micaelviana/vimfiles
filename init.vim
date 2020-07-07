@@ -144,8 +144,7 @@ let g:UltiSnipsUsePythonVersion = 3
 
 "------------------CONFIGURACOES NERDCOMMENTER------------------------
 "<leader>cn ==> comentar 
-"<leader>c<space> ==> inverter o estado. Se esta comentado descomenta, se esta
-"descomentado, comenta
+"<leader>c<space> ==> inverte o estado da linha comentada
 
 
 "Configuracoes de integracao com o python
