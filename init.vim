@@ -4,9 +4,6 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'joshdick/onedark.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
-"Icones no VIM
-Plug 'ryanoasis/vim-devicons'
-
 "Autocompletar parenteses
 Plug 'jiangmiao/auto-pairs'
 
@@ -22,17 +19,14 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-"Navegacao com o TMUX
+"Navegacao entre splits de Vim e Tmux
 Plug 'christoomey/vim-tmux-navigator'
 
-"Se funcionar vai ser um Fuzzy File Finder
+"Fuzzy File Finder
 Plug 'ctrlpvim/ctrlp.vim'
 
 "Pacote de sintaxe de linguagens
 Plug 'sheerun/vim-polyglot'
-
-"Sintaxe para assembly com arquitetura MIPS
-Plug 'vim-scripts/mips.vim'
 
 "Pacote de snippets
 Plug 'honza/vim-snippets'
@@ -171,11 +165,6 @@ let g:deoplete#enable_at_startup = 1
 "------------------CONFIGURACOES RAINBOW------------------------
 let g:rainbow_active = 1
 
-"------------------CONFIGURACOES MIPS------------------------
-"toda vez que eu criar um novo arquivo ou tiver um arquivo no buffer com a
-"extensao .s ou .S 'sete' a sintaxe para mips
-"O mips.vim nao vem com essa configuracao
-au BufNewFile,BufRead *.s,*.S set filetype=mips
 
 "------------------CONFIGURACOES AIRLINE------------------------
 set noshowmode
