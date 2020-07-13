@@ -3,7 +3,7 @@ Este é um diretório de configurações básicas para o uso do Neovim. Inclui e
 
 ## Instruções
 
-1. Caso exista uma configuração anterior do Neovim é recomendado um backup: 
+1. Caso exista uma configuração anterior do Neovim é necessário um backup: 
 
    ```mv ~/.config/nvim ~/.config/nvim.bak```
 
