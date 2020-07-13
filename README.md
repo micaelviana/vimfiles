@@ -3,9 +3,9 @@ Este é um diretório de configurações básicas para o uso do Neovim. Inclui e
 
 ## Instruções
 
-1. Apagar a pasta nvim do sistema (caso você ja tenha uma configuração anterior): 
+1. Caso exista uma configuração anterior do Neovim é recomendado um backup: 
 
-   ```rm -rf ~/.config/nvim```
+   ```mv ~/.config/nvim ~/.config/nvim.bak```
 
 2. Clonar este repositório: 
 
