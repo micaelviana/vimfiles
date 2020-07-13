@@ -9,9 +9,7 @@ Este é um diretório de configurações básicas para o uso do Neovim. Inclui e
 
 2. Clonar este repositório: 
 
-   ```cd ~/.config```
-
-   ```git clone https://github.com/micaelviana/nvim```
+   ```git clone https://github.com/micaelviana/nvim ~/.config/nvim```
 
 3. Instalar o vim-plug
 
