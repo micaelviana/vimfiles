@@ -45,10 +45,11 @@ call plug#end()
 
 
 "Definicao de tema
-syntax on
 if has('termguicolors')
     set termguicolors
 endif
+packadd! dracula
+syntax enable
 colorscheme dracula
 
 "Definicao do tema Onehalf
