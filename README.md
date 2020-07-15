@@ -30,4 +30,4 @@ Instalação e atualização do ```msgpack```:
 
 O atalho para usar a busca **Ag** precisa do pacote Silver Searcher instalado.
 
-[Página do projeto](https://github.com/ggreer/the_silver_searcher)
+Repositório do Silver Searcher: [The Silver Searcher](https://github.com/ggreer/the_silver_searcher)
