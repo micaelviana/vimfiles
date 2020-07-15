@@ -15,7 +15,7 @@ Este é um diretório de configurações básicas para o uso do Neovim. Inclui e
 
    ```curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim```
 
-4. Abrir o Neovim no Terminal e no modo de Comando digitar ```:PlugInstall```
+4. Abrir o Neovim no Terminal e no modo de Comando e digitar ```:PlugInstall```
 
 
 ## Dependências
