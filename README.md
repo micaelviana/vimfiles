@@ -27,3 +27,7 @@ Instalação e atualização do ```msgpack```:
    ```pip3 install msgpack```
    
    ```pip3 install msgpack --upgrade```
+
+O atalho para usar a busca **Ag** precisa do pacote Silver Searcher instalado.
+
+[Página do projeto](https://github.com/ggreer/the_silver_searcher)
