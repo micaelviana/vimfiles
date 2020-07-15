@@ -48,7 +48,6 @@ call plug#end()
 if has('termguicolors')
     set termguicolors
 endif
-packadd! dracula
 syntax enable
 colorscheme dracula
 
