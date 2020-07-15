@@ -89,8 +89,8 @@ nnoremap <c-f> :Ag<space>
 "Ao pressionar CTRL+S ele salva o arquivo
 nnoremap <c-s> :w <cr>
 
-""Ao pressionar CTRL+X ele salva fecha o arquivo.
-nnoremap <c-x> :wq <cr>
+""Ao pressionar CTRL+X fecha o arquivo.
+nnoremap <c-x> :q <cr>
 
 "Ctrl+a - para selecionar tudo
 map <C-a> <esc>ggVG<CR>
