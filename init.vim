@@ -95,7 +95,7 @@ nnoremap <c-x> :q <cr>
 "Ctrl+a - para selecionar tudo
 map <C-a> <esc>ggVG<CR>
 
-"Trocar duas linhas de lugar
+"Trocar duas linhas de lugar (sintaxe complicada porque evita que as linhas trocadas sobreponham o que estava no registrador. Solução legal de alguém no Stack Overflow)
 nnoremap <silent><C-Up> :let save_a=@a<Cr><Up>"add"ap<Up>:let @a=save_a<Cr>
 nnoremap <silent><C-Down> :let save_a=@a<Cr>"add"ap:let @a=save_a<Cr>
 
@@ -104,9 +104,9 @@ nnoremap <silent><C-Down> :let save_a=@a<Cr>"add"ap:let @a=save_a<Cr>
 nmap <C-n> :NERDTreeToggle<CR>
 
 "Setar split para direita no vertical e para baixo no split horizontal
-set splitbelow
-set splitright
-"Setar ss para split horizontal e vv para split vertical
+set splitright splitbelow
+
+"Setar ss para split horizontal e vv para split vertical(como no Yadr dotfiles)
 nnoremap <silent> ss <C-w>s
 nnoremap <silent> vv <C-w>v
 
