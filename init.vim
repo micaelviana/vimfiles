@@ -17,7 +17,6 @@ Plug 'vim-airline/vim-airline-themes'
 "Barra lateral
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 "Navegacao entre splits de Vim e Tmux
 Plug 'christoomey/vim-tmux-navigator'
