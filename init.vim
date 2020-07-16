@@ -109,6 +109,11 @@ set splitright splitbelow
 nnoremap <silent> ss <C-w>s
 nnoremap <silent> vv <C-w>v
 
+
+"Abrir arquivos de imagens a partir do Vim no Linux
+:autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%") | :bw
+
+
 "------------------CONFIGURACOES ULTISNIPS------------------------
 ":help Ultisnips abre o painel de ajuda do plugin
 "essa configuracao eh sobre como a janela vai se comportar
