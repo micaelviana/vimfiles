@@ -1,4 +1,4 @@
-# Dotfiles Neovim
+# Neovim Dotfiles
 
 ## Uso
 
