@@ -2,7 +2,7 @@
 
 ## Uso
 
-1. Clone do repositório:
+* Clone do repositório:
 
   ```git clone https://github.com/micaelviana/nvim ~/.config/nvim```
 
