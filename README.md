@@ -1,21 +1,15 @@
-# Neovim
-Este é um diretório de configurações básicas para o uso do Neovim. Inclui extensões, atalhos e snippets.
+# Dotfiles Neovim
 
-## Instruções
+## Uso
 
-1. Caso exista uma configuração anterior do Neovim é necessário um backup: 
-
-   ```mv ~/.config/nvim ~/.config/nvim.bak```
-
-2. Clonar este repositório: 
+1. Clone do repositório:
 
    ```git clone https://github.com/micaelviana/nvim ~/.config/nvim```
 
-3. Instalar o vim-plug
+2. Instalar o vim-plug
+   ```sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'```
 
-   ```curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim```
-
-4. Abrir o Neovim no Terminal e no modo de Comando e digitar ```:PlugInstall```
+3. Abrir o Neovim e entrar com o comando ```:PlugInstall```
 
 
 ## Dependências
