@@ -14,6 +14,7 @@ Plug 'rakr/vim-one'
 Plug 'phanviet/vim-monokai-pro'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 "-----Extras----
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'frazrepo/vim-rainbow' "Coloracao para pares de parenteses
 Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiplos cursores
 Plug 'tpope/vim-eunuch' "Syntactic sugar para comandos do shell
@@ -50,14 +51,6 @@ noremap <silent> <c-a> <esc>ggVG<CR> "seleciona todo conteudo do arquivo
 nnoremap <silent> vv <C-w>v "vv para split vertical
 nnoremap <silent> ss <C-w>s "ss para split horizontal 
 nnoremap <leader>sv :source $MYVIMRC<cr> "recarregar arquivo de configuracao do vim
-
-
-" Navegar entre splits com ctrl+(hjkl)
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>
-nnoremap <C-l> <C-w>l
-
 
 "Por algum motivo o python resiste a regra de tabs=2 espacos,mas esta gambiarra adaptada do Stack Overflow resolve"
 function! UseSpaces()
