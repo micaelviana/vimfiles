@@ -44,13 +44,13 @@ colorscheme one
 
 
 "----------DEFINICAO DE TECLAS DE ATALHO ----------
-let mapleader="\<space>" "define espaco como leader
-nnoremap <c-s> :w <cr> "ctrl+s salva o arquivo
-nnoremap <c-x> :q <cr> "ctrl+x fecha o arquivo
-map <C-a> <esc>ggVG<CR> "seleciona todo conteudo do arquivo
-nmap <silent> ss <c-w>s "ss para split horizontal
-nmap <silent> vv <c-w>v "vv para split vertical
-nnoremap <leader>sv :source $MYVIMRC<cr> "recarregar arquivo de configuracao do vim
+let mapleader="\<space>"
+nnoremap <c-s> :w <cr>
+nnoremap <c-x> :q <cr>
+map <C-a> <esc>ggVG<CR>
+nmap <silent> ss <c-w>s
+nmap <silent> vv <c-w>v
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 "Por algum motivo o python resiste a regra de tabs=2 espacos,mas esta gambiarra adaptada do Stack Overflow resolve"
 function! UseSpaces()
