@@ -44,12 +44,16 @@ colorscheme one
 
 
 "----------DEFINICAO DE TECLAS DE ATALHO ----------
+"define a tecla space como leader 
 let mapleader="\<space>"
-nnoremap <c-s> :w <cr>
-nnoremap <c-x> :q <cr>
+"ctrl+s para salvar, ctrl+x para fechar, ctrl+a seleciona tudo
+nnoremap <silent> <c-s> :w <cr>
+nnoremap <silent> <c-x> :q <cr>
 map <C-a> <esc>ggVG<CR>
+"atalhos para splits
 nmap <silent> ss <c-w>s
 nmap <silent> vv <c-w>v
+"recarregar o Vim File 
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 "Por algum motivo o python resiste a regra de tabs=2 espacos,mas esta gambiarra adaptada do Stack Overflow resolve"
