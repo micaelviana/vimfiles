@@ -11,17 +11,6 @@
 
 3. Abrir o Neovim e entrar com o comando ```:PlugInstall```
 
+4. Resolver dependências
 
-## Dependências
-
-A extensão **Deoplete** precisa que o Neovim esteja na versão 0.3.0+ e que o módulo **msgpack** do Python esteja na versão 1.0.0+.
-
-Instalação e atualização do ```msgpack```:
-
-   ```pip3 install msgpack```
-   
-   ```pip3 install msgpack --upgrade```
-
-O atalho para usar a busca **Ag** precisa do pacote Silver Searcher instalado.
-
-Repositório do Silver Searcher: [The Silver Searcher](https://github.com/ggreer/the_silver_searcher)
+   ```pip3 install msgpack pynvim --upgrade```
