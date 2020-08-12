@@ -48,8 +48,8 @@ let mapleader="\<space>" "define espaco como leader
 nnoremap <silent> <c-s> :w <cr> "ctrl+s salva o arquivo
 nnoremap <silent> <c-x> :q <cr> "ctrl+x fecha o arquivo
 noremap <silent> <c-a> <esc>ggVG<CR> "seleciona todo conteudo do arquivo
-nnoremap <silent> vv <C-w>v "vv para split vertical
-nnoremap <silent> ss <C-w>s "ss para split horizontal 
+nmap <silent> vv <C-w>v "vv para split vertical
+nmap <silent> ss <C-w>s "ss para split horizontal 
 nnoremap <leader>sv :source $MYVIMRC<cr> "recarregar arquivo de configuracao do vim
 
 "Por algum motivo o python resiste a regra de tabs=2 espacos,mas esta gambiarra adaptada do Stack Overflow resolve"
