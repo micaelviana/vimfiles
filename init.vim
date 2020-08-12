@@ -1,178 +1,95 @@
-call plug#begin()
-"Temas
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
-Plug 'joshdick/onedark.vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
-
-"Autocompletar parenteses
-Plug 'jiangmiao/auto-pairs'
-
-"Coloracao para pares de parenteses
-Plug 'oblitum/rainbow'
-
-"Barra inferior
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-"Barra lateral
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-
-"Navegacao entre splits de Vim e Tmux
-Plug 'christoomey/vim-tmux-navigator'
-
-"Fuzzy File Finder
-Plug 'ctrlpvim/ctrlp.vim'
-
-"Pacote de sintaxe de linguagens
-Plug 'sheerun/vim-polyglot'
-
-"Pacote de snippets
-Plug 'honza/vim-snippets'
-
-"Criar novos snippets
-Plug 'sirver/ultisnips'
-
-"Autocomplete
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-"Assistente para comentários
-Plug 'scrooloose/nerdcommenter'
-
+call plug#begin('~/.vim/plugged')
+"-----Basico----
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "Autocomplete
+Plug 'jiangmiao/auto-pairs' "Autocompletar parenteses
+Plug 'ctrlpvim/ctrlp.vim' "Ctrlp para navegar por arquivos
+Plug 'preservim/nerdtree' "Barra lateral
+Plug 'itchyny/lightline.vim' "Barra inferior
+Plug 'preservim/nerdcommenter' "assistente para  inserir comentarios
+Plug 'sheerun/vim-polyglot' "Sinxtaxe de diversas linguagens de programacao
+"-----Snippets----
+Plug 'honza/vim-snippets' | Plug 'SirVer/ultisnips' " Arquivos de snippets para vários linguagens e criacao de novos snippets
+"-----Temas----
+Plug 'rakr/vim-one'
+Plug 'phanviet/vim-monokai-pro'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+"-----Extras----
+Plug 'frazrepo/vim-rainbow' "Coloracao para pares de parenteses
+Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiplos cursores
+Plug 'tpope/vim-eunuch' "Syntactic sugar para comandos do shell
+Plug 'ap/vim-css-color' "preview das cores do css 
+Plug 'ryanoasis/vim-devicons' "icones para o Vim, funciona com nerdfonts
 call plug#end()
-"Depois de adicionar um plugin execute o comando :PlugInstall"
 
-
-"Definicao de tema
-if has('termguicolors')
-    set termguicolors
+"----------CONFIGURACOES GERAIS----------
+set hidden "manter multiplos buffers abertos
+set number relativenumber "mostrar numeros das linhas
+set cursorline "destaca linha do cursor
+set mouse=a "habilita interacao com o mouse
+set ignorecase "desativa case sensitive na pesquisa e nos comandos do vim
+set inc=split "preview de comandos
+set splitright splitbelow "define pra que lado se abrem os splits 
+syntax enable "colorir corretamente a sintaxe de linguagens
+set clipboard=unnamedplus "clipboard entre o neovim e os outros progranas
+set expandtab shiftwidth=2 tabstop=2 autoindent "tabs expandem para 2 espacos, manter indentacao da linha anterior
+if has('termguicolors')  "habilitar cores do terminal
+    set termguicolors  
 endif
-syntax enable
-colorscheme dracula
 
-"Definicao do tema Onehalf
-"colorscheme onehalfdark
-"or
-"colorscheme onehalflight
+autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Abrir arquivos de imagens a partir do Vim no Linux
 
-"Permite a navegacao entre arquivos sem ter que salvar as alteracoes antes de ir para um arquivo diferente"
-set hidden
-
-"Habilita a visao lateral do numero das linhas"
-set number
-
-"Habilita a linha relativa, o deslocamento da linha atual ate a linha x"
-set relativenumber
-
-"Destacar linha que contém o cursor
-set cursorline
-
-"Habilita interacao com o mouse "
-set mouse=a
-
-"Ativa case insensitive por padrão
-set ignorecase
-
-"Habilita preview de comando"
-set inccommand=split
-
-"Criando atalhos com o teclado"
-
-"Definir tecla principal dos atalhos"
-let mapleader = "\<space>"
-
-"Ao pressionar CTRL+F ele aciona o buscador Ag: e da espaco pra buscar um
-"termo em todo o diretorio atual de trabalho. Precisa do pacote silver-searcher instalado
-nnoremap <c-f> :Ag<space>
-
-"Ao pressionar CTRL+S ele salva o arquivo
-nnoremap <c-s> :w <cr>
-
-""Ao pressionar CTRL+X fecha o arquivo.
-nnoremap <c-x> :q <cr>
-
-"Ctrl+a - para selecionar tudo
-map <C-a> <esc>ggVG<CR>
-
-"Trocar duas linhas de lugar (sintaxe complicada porque evita que as linhas trocadas sobreponham o que estava no registrador. Solução legal de alguém no Stack Overflow)
-nnoremap <silent><C-Up> :let save_a=@a<Cr><Up>"add"ap<Up>:let @a=save_a<Cr>
-nnoremap <silent><C-Down> :let save_a=@a<Cr>"add"ap:let @a=save_a<Cr>
+"definicao de tema
+colorscheme one
 
 
-"Atalho para o NERDTree: ativar e desativar
-nmap <C-n> :NERDTreeToggle<CR>
-
-"Setar split para direita no vertical e para baixo no split horizontal
-set splitright splitbelow
-
-"Setar ss para split horizontal e vv para split vertical(como no Yadr dotfiles)
-nnoremap <silent> ss <C-w>s
-nnoremap <silent> vv <C-w>v
-
-
-"Abrir arquivos de imagens a partir do Vim no Linux
-:autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%") | :bw
+"----------DEFINICAO DE TECLAS DE ATALHO ----------
+let mapleader="\<space>" "define espaco como leader
+nnoremap <silent> <c-s> :w <cr> "ctrl+s salva o arquivo
+nnoremap <silent> <c-x> :q <cr> "ctrl+x fecha o arquivo
+noremap <silent> <c-a> <esc>ggVG<CR> "seleciona todo conteudo do arquivo
+nnoremap <silent> vv <C-w>v "vv para split vertical
+nnoremap <silent> ss <C-w>s "ss para split horizontal 
+nnoremap <leader>sv :source $MYVIMRC<cr> "recarregar arquivo de configuracao do vim
 
 
-"------------------CONFIGURACOES ULTISNIPS------------------------
-":help Ultisnips abre o painel de ajuda do plugin
-"essa configuracao eh sobre como a janela vai se comportar
-let g:UltiSnipsEditSplit='vertical'
-"essa configuracao eh o diretorio onde vao ficar os arquivos de snippets
-let g:UltiSnipsSnippetsEdit = '~/.config/nvim/UltiSnips'
-
-":UltiSnipsEdit permite a criacao de um novo snippet
-
-"escopo da criacao de um snippet
-"snippet atalho 'Descricao' b ==> na verdade descricao eh entre aspas duplas
-"function $1 (){
-"	$0
-"}
-"endsnippet
-"-----------------------------------
-"Copiando do vim para o clipboard
-"O Vim tem duas areas de colagem. Uma para o Vim e
-"outra para o sistema
-"Habilitar CTRL+C como atalho pra copiar do vim para o sistema
-"
-
-vnoremap <C-c> "+y
-
-set clipboard=unnamedplus
-set clipboard=unnamed
+" Navegar entre splits com ctrl+(hjkl)
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>
+nnoremap <C-l> <C-w>l
 
 
-"------Colocando Ultisnips para Python3------"
-let g:UltiSnipsUsePythonVersion = 3
+"Por algum motivo o python resiste a regra de tabs=2 espacos,mas esta gambiarra adaptada do Stack Overflow resolve"
+function! UseSpaces()
+  set tabstop=2     " Size of a hard tabstop (ts).
+  set shiftwidth=2  " Size of an indentation (sw).
+  set expandtab     " Always uses spaces instead of tab characters (et).
+  set softtabstop=0 " Number of spaces a <Tab> counts for. When 0, featuer is off (sts).
+  set autoindent    " Copy indent from current line when starting a new line.
+  set smarttab      " Inserts blanks on a <Tab> key (as per sw, ts and sts).
+endfunction
+au! BufEnter,BufNewFile *.py call UseSpaces()
 
 
-"------------------CONFIGURACOES NERDCOMMENTER------------------------
-"<leader>cn ==> comentar 
-"<leader>c<space> ==> inverte o estado da linha comentada
-
-
-"Configuracoes de integracao com o python
-let g:python_host_prog = 'usr/bin/python'
-let g:python3_host_prog = '/usr/bin/python3'
-let g:syntastic_python_python_exec = 'python3' 
-
-
-"------------------CONFIGURACOES DEOPLETE------------------------
+"----------CONFIGURACOES DE PLUGINS----------
+"Deoplete: ativar Autocomplete
 let g:deoplete#enable_at_startup = 1
 
+"NERDTree: ativar e desativar a barra
+map <C-b> :NERDTreeToggle<CR>
 
-"------------------CONFIGURACOES RAINBOW------------------------
+"lightline
+set noshowmode "pra nao ficar redundante no modo de insercao
+"definicao de tema
+let g:lightline = {
+      \ 'colorscheme': 'deus',
+      \ }
+
+"NERDCommenter: comentar e descomentar linhas
+map // <plug>NERDCommenterToggle
+
+"UltiSnips: habilitar split para edicao de snippet
+let g:UltiSnipsEditSplit='vertical'
+
+"vim-rainbow: ativar por padrao
 let g:rainbow_active = 1
-
-
-"------------------CONFIGURACOES AIRLINE------------------------
-set noshowmode
-let g:airline#extensions#tabline#enabled = 1
-let airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#formatter ='unique_tail_improved'
-let g:airline_theme='deus'
-
-
-"------------------CONFIGURACOES TAB/SPACE------------------------
-
-set expandtab softtabstop=2 shiftwidth=2
