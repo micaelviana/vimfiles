@@ -14,7 +14,7 @@ Plug 'rakr/vim-one'
 Plug 'phanviet/vim-monokai-pro'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 "-----Extras----
-Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator' "navegação mais amigável pelos splits
 Plug 'frazrepo/vim-rainbow' "Coloracao para pares de parenteses
 Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiplos cursores
 Plug 'tpope/vim-eunuch' "Syntactic sugar para comandos do shell
