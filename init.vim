@@ -10,9 +10,7 @@ Plug 'sheerun/vim-polyglot' "Sinxtaxe de diversas linguagens de programacao
 "-----Snippets----
 Plug 'honza/vim-snippets' | Plug 'SirVer/ultisnips' " Arquivos de snippets para vários linguagens e criacao de novos snippets
 "-----Temas----
-Plug 'rakr/vim-one'
-Plug 'phanviet/vim-monokai-pro'
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'dracula/vim', { 'as': 'dracula' }
 "-----Extras----
 Plug 'christoomey/vim-tmux-navigator' "navegação mais amigável pelos splits
 Plug 'frazrepo/vim-rainbow' "Coloracao para pares de parenteses
@@ -32,7 +30,7 @@ set inc=split "preview de comandos
 set splitright splitbelow "define pra que lado se abrem os splits 
 syntax enable "colorir corretamente a sintaxe de linguagens
 set clipboard=unnamedplus "clipboard entre o neovim e os outros progranas
-set expandtab shiftwidth=2 tabstop=2 autoindent "tabs expandem para 2 espacos, manter indentacao da linha anterior
+set expandtab shiftwidth=4 autoindent "tabs expandem para 4 espacos, manter indentacao da linha anterior
 if has('termguicolors')  "habilitar cores do terminal
     set termguicolors  
 endif
@@ -40,7 +38,7 @@ endif
 autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Abrir arquivos de imagens a partir do Vim no Linux
 
 "definicao de tema
-colorscheme one
+colorscheme dracula
 
 
 "----------DEFINICAO DE TECLAS DE ATALHO ----------
@@ -50,23 +48,11 @@ let mapleader="\<space>"
 nnoremap <silent> <c-s> :w <cr>
 nnoremap <silent> <c-x> :q <cr>
 map <C-a> <esc>ggVG<CR>
-"atalhos para splits
-nmap <silent> ss <c-w>s
-nmap <silent> vv <c-w>v
+"atalhos para splits (de YADR dotfiles)
+nnoremap <silent> ss <C-w>s
+nnoremap <silent> vv <C-w>v
 "recarregar o Vim File 
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
-"Por algum motivo o python resiste a regra de tabs=2 espacos,mas esta gambiarra adaptada do Stack Overflow resolve"
-function! UseSpaces()
-  set tabstop=2     " Size of a hard tabstop (ts).
-  set shiftwidth=2  " Size of an indentation (sw).
-  set expandtab     " Always uses spaces instead of tab characters (et).
-  set softtabstop=0 " Number of spaces a <Tab> counts for. When 0, featuer is off (sts).
-  set autoindent    " Copy indent from current line when starting a new line.
-  set smarttab      " Inserts blanks on a <Tab> key (as per sw, ts and sts).
-endfunction
-au! BufEnter,BufNewFile *.py call UseSpaces()
-
+nnoremap <leader>rv :source ~/.config/nvim/init.vim <cr>
 
 "----------CONFIGURACOES DE PLUGINS----------
 "Deoplete: ativar Autocomplete
@@ -78,9 +64,7 @@ map <C-b> :NERDTreeToggle<CR>
 "lightline
 set noshowmode "pra nao ficar redundante no modo de insercao
 "definicao de tema
-let g:lightline = {
-      \ 'colorscheme': 'deus',
-      \ }
+let g:lightline = { 'colorscheme': 'dracula' }
 
 "NERDCommenter: comentar e descomentar linhas
 map // <plug>NERDCommenterToggle
