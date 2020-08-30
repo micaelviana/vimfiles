@@ -12,7 +12,7 @@
 
 3. Resolver dependências:
 
-   ```pip3 install msgpack pynvim --upgrade```
+   ```curl -sL install-node.now.sh/lts | bash```
 
 4. Abrir o Neovim e entrar com o comando:
 
