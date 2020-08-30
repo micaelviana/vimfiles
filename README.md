@@ -12,7 +12,7 @@
 
 3. Resolver dependências:
 
-   ```curl -sL install-node.now.sh/lts | bash```
+   ```https://nodejs.org/en/download/```
 
 4. Abrir o Neovim e entrar com o comando:
 
