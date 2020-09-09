@@ -40,7 +40,6 @@ autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Abrir a
 "definicao de tema
 colorscheme dracula
 
-
 "----------DEFINICAO DE TECLAS DE ATALHO ----------
 "define a tecla space como leader 
 let mapleader="\<space>"
