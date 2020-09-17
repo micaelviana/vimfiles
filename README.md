@@ -12,7 +12,7 @@
 
 3. Resolver dependências:
 
-   ```https://nodejs.org/en/download/```
+   ```pip3 install msgpack --upgrade```
 
 4. Abrir o Neovim e entrar com o comando:
 
