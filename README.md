@@ -11,8 +11,8 @@
    ```sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'```
 
 3. Resolver dependências:
-   ```pip3 install pynvim```
-   ```pip3 install msgpack --upgrade```
+   ```pip3 install pynvim msgpack --upgrade```
+   
 
 4. Abrir o Neovim e entrar com o comando:
 
