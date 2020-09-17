@@ -5,7 +5,7 @@
 
 call plug#begin('~/.vim/plugged')
 "-----Basico----
-Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "Autocomplete
 Plug 'jiangmiao/auto-pairs' "Autocompletar parenteses
 Plug 'ctrlpvim/ctrlp.vim' "Ctrlp para navegar por arquivos
 Plug 'preservim/nerdtree' "Barra lateral
@@ -59,6 +59,10 @@ nnoremap <silent> vv <C-w>v
 nnoremap <leader>rv :source ~/.config/nvim/init.vim <cr>
 
 "----------CONFIGURACOES DE PLUGINS----------
+
+"Deoplete: ativar ao iniciar
+let g:deoplete#enable_at_startup = 1
+
 "NERDTree: ativar e desativar a barra
 map <C-b> :NERDTreeToggle<CR>
 
