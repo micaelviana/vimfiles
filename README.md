@@ -12,11 +12,8 @@
 
 3. Resolver dependências:
 
-   ```pip3 install pynvim```
-
-   ```pip3 install msgpack --upgrade```
+   ```pip3 install pynvim && pip3 install msgpack --upgrade```
    
-
 4. Abrir o Neovim e entrar com o comando:
 
     ```:PlugInstall``` 
