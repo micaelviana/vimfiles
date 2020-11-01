@@ -12,7 +12,7 @@
 
 3. Resolver dependências:
 
-   ```pip3 install pynvim && pip3 install msgpack --upgrade```
+   ```https://nodejs.org/en/download/```
    
 4. Instalar os plugins:
 
