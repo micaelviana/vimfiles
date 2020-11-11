@@ -20,7 +20,6 @@ Plug 'honza/vim-snippets' | Plug 'SirVer/ultisnips' " Arquivos de snippets para 
 Plug 'dracula/vim', { 'as': 'dracula' }
 "-----Extras----
 Plug 'christoomey/vim-tmux-navigator' "navegação mais amigável pelos splits
-Plug 'frazrepo/vim-rainbow' "Coloracao para pares de parenteses
 Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiplos cursores
 Plug 'ryanoasis/vim-devicons' "icones para o Vim, funciona com nerdfonts
 call plug#end()
