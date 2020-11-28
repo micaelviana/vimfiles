@@ -17,7 +17,7 @@ Plug 'sheerun/vim-polyglot' "Sinxtaxe de diversas linguagens de programacao
 "-----Snippets----
 Plug 'honza/vim-snippets' | Plug 'SirVer/ultisnips' " Arquivos de snippets para vários linguagens e criacao de novos snippets
 "-----Temas----
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 "-----Extras----
 Plug 'christoomey/vim-tmux-navigator' "navegação mais amigável pelos splits
 Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiplos cursores
@@ -42,7 +42,9 @@ endif
 autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Abrir arquivos de imagens a partir do Vim no Linux
 
 "definicao de tema
-colorscheme dracula
+let g:material_terminal_italics = 1
+let g:material_theme_style = 'ocean'
+colorscheme material
 
 "----------DEFINICAO DE TECLAS DE ATALHO ----------
 "define a tecla space como leader 
@@ -64,7 +66,7 @@ map <C-b> :NERDTreeToggle<CR>
 "lightline
 set noshowmode "pra nao ficar redundante no modo de insercao
 "definicao de tema
-let g:lightline = { 'colorscheme': 'dracula' }
+let g:lightline = { 'colorscheme': 'material_vim' }
 
 "NERDCommenter: comentar e descomentar linhas
 map // <plug>NERDCommenterToggle
