@@ -86,17 +86,22 @@ let g:startify_custom_header = [
  \ '██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ',
  \ '╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ',
  \]
+ 
+ let g:startify_bookmarks = [
+            \ { 'i': '~/.config/nvim/init.vim' },
+            \ { 'z': '~/.zshrc' },
+            \ '~/Code',
+            \ ]
+            
+let g:startify_lists = [
+        \ { 'type': 'files',     'header': ['   Files']            },
+        \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+        \ ]            
                                                   
 let g:webdevicons_enable_startify = 1
 function! StartifyEntryFormat()
         return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
     endfunction
-
-let g:startify_bookmarks = [
-            \ { 'i': '~/.config/nvim/init.vim' },
-            \ { 'z': '~/.zshrc' },
-            \ '~/Code',
-            \ ]
 
 
 "------------------------Conquer of Completion
