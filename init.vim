@@ -21,6 +21,7 @@ Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 "-----Extras----
 Plug 'christoomey/vim-tmux-navigator' "navegação mais amigável pelos splits
 Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiplos cursores
+Plug 'mhinz/vim-startify' "Start screen
 Plug 'ryanoasis/vim-devicons' "icones para o Vim, funciona com nerdfonts
 call plug#end()
 
@@ -73,6 +74,29 @@ map // <plug>NERDCommenterToggle
 
 "UltiSnips: habilitar split para edicao de snippet
 let g:UltiSnipsEditSplit='vertical'
+
+"Preferências do Startify
+Baseado em: https://github.com/benbrastmckie/.config/
+
+let g:startify_custom_header = [
+ \ '███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ',
+ \ '████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ',
+ \ '██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ',
+ \ '██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ',
+ \ '██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ',
+ \ '╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ',
+ \]
+                                                  
+let g:webdevicons_enable_startify = 1
+function! StartifyEntryFormat()
+        return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+    endfunction
+
+let g:startify_bookmarks = [
+            \ { 'i': '~/.config/nvim/init.vim' },
+            \ { 'z': '~/.zshrc' },
+            \ '~/Code',
+            \ ]
 
 
 "------------------------Conquer of Completion
@@ -236,6 +260,5 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 "Gerenciar extensoes do coc.nvim
-let g:coc_global_extensions = ['coc-git', 'coc-pairs', 'coc-highlight', 'coc-lines', 'coc-marketplace', 'coc-snippets']
-"git,pares de parenteses,cores do css, destacar linhas com conteudo
-"selecionado pelo cursor, gerenciar plugins do coc-nvim, solucao para snippets do conquer
+let g:coc_global_extensions = ['coc-git', 'coc-pairs', 'coc-highlight', 'coc-marketplace', 'coc-snippets']
+"git,pares de parenteses,cores do css, gerenciar plugins do coc-nvim, solucao para snippets do conquer
