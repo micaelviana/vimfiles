@@ -76,7 +76,7 @@ map // <plug>NERDCommenterToggle
 let g:UltiSnipsEditSplit='vertical'
 
 "Preferências do Startify
-Baseado em: https://github.com/benbrastmckie/.config/
+"Baseado em: https://github.com/benbrastmckie/.config/
 
 let g:startify_custom_header = [
  \ '███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ',
