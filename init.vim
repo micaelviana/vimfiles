@@ -15,7 +15,7 @@ Plug 'itchyny/lightline.vim' "Barra inferior
 Plug 'preservim/nerdcommenter' "assistente para  inserir comentarios
 Plug 'sheerun/vim-polyglot' "Sinxtaxe de diversas linguagens de programacao
 "-----Snippets----
-Plug 'honza/vim-snippets' | Plug 'SirVer/ultisnips' " Arquivos de snippets para vários linguagens e criacao de novos snippets
+Plug 'honza/vim-snippets' "Arquivos de snippets para vários linguagens
 "-----Temas----
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 "-----Extras----
