@@ -12,7 +12,7 @@
 
 3. Resolver dependências:
 
-   ```https://nodejs.org/en/download/```
+   [Nodejs](https://nodejs.org/en/download/)
    
 4. Instalar os plugins:
 
