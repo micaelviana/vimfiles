@@ -9,6 +9,7 @@
 call plug#begin('~/.vim/plugged')
 "-----Basico----
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete
+Plug 'jiangmiao/auto-pairs'
 Plug 'ctrlpvim/ctrlp.vim' "Ctrlp para navegar por arquivos
 Plug 'preservim/nerdtree' "Barra lateral
 Plug 'itchyny/lightline.vim' "Barra inferior
