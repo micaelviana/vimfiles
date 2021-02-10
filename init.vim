@@ -17,6 +17,7 @@ Plug 'preservim/nerdcommenter' "assistente para  inserir comentarios
 Plug 'sheerun/vim-polyglot' "Sinxtaxe de diversas linguagens de programacao
 "-----Snippets----
 Plug 'honza/vim-snippets' "Arquivos de snippets para vários linguagens
+Plug 'SirVer/ultisnips' "Criar novos snippets
 "-----Temas----
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 "-----Extras----
@@ -64,6 +65,9 @@ nnoremap <leader>rv :source ~/.config/nvim/init.vim <cr>
 "----------CONFIGURACOES DE PLUGINS----------
 "NERDTree: ativar e desativar a barra
 map <C-b> :NERDTreeToggle<CR>
+
+"UltiSnips
+let g:UltiSnipsEditSplit="vertical"
 
 "lightline
 set noshowmode "pra nao ficar redundante no modo de insercao
