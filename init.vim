@@ -263,7 +263,3 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
-"Gerenciar extensoes do coc.nvim
-let g:coc_global_extensions = ['coc-git', 'coc-pairs', 'coc-highlight', 'coc-marketplace', 'coc-snippets']
-"git,pares de parenteses,cores do css, gerenciar plugins do coc-nvim, solucao para snippets do conquer
