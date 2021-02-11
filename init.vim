@@ -54,7 +54,7 @@ colorscheme material
 let mapleader="\<space>"
 "ctrl+s para salvar, ctrl+x para fechar, ctrl+a seleciona tudo
 nnoremap <silent> <c-s> :w <cr>
-nnoremap <silent> <c-x> :q <cr>
+nnoremap <silent> <c-x> :x <cr>
 map <C-a> <esc>ggVG<CR>
 "atalhos para splits (de YADR dotfiles)
 nnoremap <silent> ss <C-w>s
