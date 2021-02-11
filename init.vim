@@ -46,7 +46,7 @@ autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Abrir a
 
 "definicao de tema
 let g:material_terminal_italics = 1
-let g:material_theme_style = 'ocean'
+let g:material_theme_style = 'darker'
 colorscheme material
 
 "----------DEFINICAO DE TECLAS DE ATALHO ----------
@@ -106,7 +106,9 @@ function! StartifyEntryFormat()
     endfunction
 
     
-    
+"=============================================================================================================
+"FROM CONQUER OF COMPLETION
+
 " TextEdit might fail if hidden is not set.
 set hidden
 
