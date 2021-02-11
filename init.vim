@@ -66,9 +66,6 @@ nnoremap <leader>rv :source ~/.config/nvim/init.vim <cr>
 "NERDTree: ativar e desativar a barra
 map <C-b> :NERDTreeToggle<CR>
 
-"UltiSnips
-let g:UltiSnipsEditSplit="vertical"
-
 "lightline
 set noshowmode "pra nao ficar redundante no modo de insercao
 "definicao de tema
