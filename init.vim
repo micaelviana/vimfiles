@@ -52,8 +52,8 @@ colorscheme material
 "----------DEFINICAO DE TECLAS DE ATALHO ----------
 "define a tecla space como leader 
 let mapleader="\<space>"
-"ctrl+s para salvar, ctrl+x para fechar, ctrl+a seleciona tudo
-nnoremap <silent> <c-s> :w <cr>
+"space+b para salvar, ctrl+x para fechar, ctrl+a seleciona tudo
+nnoremap <leader>b :w <cr>
 nnoremap <silent> <c-x> :x <cr>
 map <C-a> <esc>ggVG<CR>
 "atalhos para splits (de YADR dotfiles)
@@ -64,7 +64,7 @@ nnoremap <leader>rv :source ~/.config/nvim/init.vim <cr>
 
 "----------CONFIGURACOES DE PLUGINS----------
 "NERDTree: ativar e desativar a barra
-map <C-b> :NERDTreeToggle<CR>
+map <C-t> :NERDTreeToggle<CR>
 
 "lightline
 set noshowmode "pra nao ficar redundante no modo de insercao
