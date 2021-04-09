@@ -20,6 +20,7 @@ Plug 'SirVer/ultisnips' "Criar novos snippets
 Plug 'honza/vim-snippets' "Arquivos de snippets para vários linguagens
 "-----Temas----
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'haishanh/night-owl.vim'
 "-----Extras----
 Plug 'christoomey/vim-tmux-navigator' "navegação mais amigável pelos splits
 Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiplos cursores
@@ -47,7 +48,8 @@ autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Abrir a
 "definicao de tema
 let g:material_terminal_italics = 1
 let g:material_theme_style = 'darker'
-colorscheme material
+" colorscheme material
+colorscheme night-owl
 
 "----------DEFINICAO DE TECLAS DE ATALHO ----------
 "define a tecla space como leader 
