@@ -71,7 +71,7 @@ map <C-t> :NERDTreeToggle<CR>
 "lightline
 set noshowmode "pra nao ficar redundante no modo de insercao
 "definicao de tema
-let g:lightline = { 'colorscheme': 'material_vim' }
+let g:lightline = { 'colorscheme': 'nightowl' }
 
 "NERDCommenter: comentar e descomentar linhas
 map // <plug>NERDCommenterToggle
