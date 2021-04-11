@@ -25,6 +25,7 @@ Plug 'haishanh/night-owl.vim'
 Plug 'christoomey/vim-tmux-navigator' "navegação mais amigável pelos splits
 Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiplos cursores
 Plug 'mhinz/vim-startify' "Start screen
+Plug 'psliwka/vim-smoothie' "Smooth scrolling for Vim done right
 Plug 'ryanoasis/vim-devicons' "icones para o Vim, funciona com nerdfonts
 call plug#end()
 
