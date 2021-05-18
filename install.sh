@@ -14,13 +14,6 @@ install() {
 	[ -f "/etc/arch-release" ] && installarch
 }
 
-#asktoinstall() {
-	#echo "Dependencias nao encontradas"
-	#echo -n "Instalar dependencias? (y/n)? "
-	#read answer
-	#[ "$answer" != "${answer#[Yy]}" ] && install
-#}
-
 #Inicio
 echo 'Instalando os dotfiles'
 
