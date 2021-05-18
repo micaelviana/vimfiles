@@ -1,6 +1,10 @@
 # Neovim Dotfiles
 
-## Uso
+##Quick Install para Linux
+
+``` bash <(curl -s https://raw.githubusercontent.com/micaelviana/nvim/master/install.sh) ```
+
+##Uso
 
 1. Clone do repositório:
 
