@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# esse código é baseado no instalador do projeto Lunarvim: https://github.com/ChristianChiarulli/LunarVim
+
 installubuntu() {
 	sudo apt install nodejs npm curl git 
 }
@@ -17,7 +19,7 @@ install() {
 #Inicio
 echo 'Instalando os dotfiles'
 
-# move old nvim directory if it exists
+# mover o diretório nvim se ele já existe 
 [ -d "$HOME/.config/nvim" ] && echo "Mova a pasta ~/.config/nvim antes de instalar" && exit
 
 echo "======Instalando dependencias======"
