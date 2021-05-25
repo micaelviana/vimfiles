@@ -111,4 +111,4 @@ function! StartifyEntryFormat()
     
 "=============================================================================================================
 "FROM CONQUER OF COMPLETION
-source ./coc.vim
+source coc.vim
