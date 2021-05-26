@@ -47,16 +47,14 @@ endif
 autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Abrir arquivos de imagens a partir do Vim no Linux
 
 "definicao de tema
-let g:material_terminal_italics = 1
-let g:material_theme_style = 'darker'
+"let g:material_terminal_italics = 1
+"let g:material_theme_style = 'darker'
 " colorscheme material
 colorscheme night-owl
 
 "----------DEFINICAO DE TECLAS DE ATALHO ----------
-"define a tecla space como leader 
-let mapleader="\<space>"
-"space+b para salvar, ctrl+x para fechar, ctrl+a seleciona tudo
-nnoremap <leader>b :w <cr>
+"leader+s para salvar, ctrl+x para fechar, ctrl+a seleciona tudo
+nnoremap <leader>s :w <cr>
 nnoremap <silent> <c-x> :x <cr>
 map <C-a> <esc>ggVG<CR>
 "atalhos para splits (de YADR dotfiles)
@@ -106,7 +104,7 @@ let g:startify_lists = [
 let g:webdevicons_enable_startify = 1
 function! StartifyEntryFormat()
         return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
-    endfunction
+endfunction
 
     
 "=============================================================================================================
