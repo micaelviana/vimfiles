@@ -109,4 +109,8 @@ endfunction
     
 "=============================================================================================================
 "FROM CONQUER OF COMPLETION
-source! coc.vim
+if has('win32')
+    source C:/Users/Micael/AppData/Local/nvim/coc.vim
+else
+    source ~/.config/nvim/coc.vim
+endif
