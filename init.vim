@@ -114,3 +114,5 @@ if has('win32')
 else
     source ~/.config/nvim/coc.vim
 endif
+
+echo "alakazam"
