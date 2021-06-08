@@ -21,6 +21,7 @@ Plug 'honza/vim-snippets' "Arquivos de snippets para vários linguagens
 "-----Temas----
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'haishanh/night-owl.vim'
+Plug 'rakr/vim-one'
 "-----Extras----
 Plug 'christoomey/vim-tmux-navigator' "navegação mais amigável pelos splits
 Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiplos cursores
@@ -50,7 +51,11 @@ autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Abrir a
 "let g:material_terminal_italics = 1
 "let g:material_theme_style = 'darker'
 " colorscheme material
-colorscheme night-owl
+
+colorscheme one
+set background=dark " for the dark version
+" set background=light " for the light version
+let g:one_allow_italics = 1 " I love italic for comments
 
 "----------DEFINICAO DE TECLAS DE ATALHO ----------
 "leader+s para salvar, ctrl+x para fechar, ctrl+a seleciona tudo
@@ -70,7 +75,7 @@ map <C-t> :NERDTreeToggle<CR>
 "lightline
 set noshowmode "pra nao ficar redundante no modo de insercao
 "definicao de tema
-let g:lightline = { 'colorscheme': 'nightowl' }
+let g:lightline = { 'colorscheme': 'one' }
 
 "NERDCommenter: comentar e descomentar linhas
 map // <plug>NERDCommenterToggle
@@ -112,5 +117,5 @@ endfunction
 if has('win32')
     source C:/Users/Micael/AppData/Local/nvim/coc.vim
 else
-    source ~/.config/nvim/coc.vim
+    source $HOME/.config/nvim/coc.vim
 endif
