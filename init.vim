@@ -98,7 +98,7 @@ let g:startify_custom_header = [
  let g:startify_bookmarks = [
             \ { 'i': '~/.config/nvim/init.vim' },
             \ { 'z': '~/.zshrc' },
-            \ '~/Desktop',
+            \ '~/repo',
             \ ]
             
 let g:startify_lists = [
