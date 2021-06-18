@@ -20,7 +20,6 @@ Plug 'SirVer/ultisnips' "Criar novos snippets
 Plug 'honza/vim-snippets' "Arquivos de snippets para vários linguagens
 "-----Temas----
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-Plug 'haishanh/night-owl.vim'
 Plug 'rakr/vim-one'
 "-----Extras----
 Plug 'christoomey/vim-tmux-navigator' "navegação mais amigável pelos splits
@@ -66,7 +65,7 @@ map <C-a> <esc>ggVG<CR>
 nnoremap <silent> ss <C-w>s
 nnoremap <silent> vv <C-w>v
 "recarregar o Vim File 
-nnoremap <leader>rv :source ~/.config/nvim/init.vim <cr>
+nnoremap <leader>rv :source $HOME/.config/nvim/init.vim <cr>
 
 "----------CONFIGURACOES DE PLUGINS----------
 "NERDTree: ativar e desativar a barra
@@ -114,8 +113,8 @@ endfunction
     
 "=============================================================================================================
 "FROM CONQUER OF COMPLETION
-if has('win32')
-    source C:/Users/Micael/AppData/Local/nvim/coc.vim
-else
+if has('unix')
     source $HOME/.config/nvim/coc.vim
+else
+    source C:/Users/Micael/AppData/Local/nvim/coc.vim
 endif
