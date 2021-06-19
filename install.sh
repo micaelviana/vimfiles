@@ -12,7 +12,7 @@ installarch() {
 
 install() {
 	echo "Instalando dependencias..."
-	[ -n "$(cat /etc/os-release | grep Ubuntu)" ] && installubuntu
+	[ -n "$(cat /etc/os-release | grep ubuntu)" ] && installubuntu
 	[ -f "/etc/arch-release" ] && installarch
 }
 
