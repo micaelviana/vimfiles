@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# esse código é baseado no instalador do projeto Lunarvim: https://github.com/ChristianChiarulli/LunarVim
+#This code was based on the Lunarvim project installer https://github.com/ChristianChiarulli/LunarVim
 
 installubuntu() {
 	sudo apt install nodejs npm curl git 
@@ -11,29 +11,29 @@ installarch() {
 }
 
 install() {
-	echo "Instalando dependencias..."
 	[ -n "$(cat /etc/os-release | grep ubuntu)" ] && installubuntu
 	[ -f "/etc/arch-release" ] && installarch
 }
 
-#Inicio
-echo 'Instalando os dotfiles'
+#Begin
+echo 'Installing dotfiles'
 
-# mover o diretório nvim se ele já existe 
-[ -d "$HOME/.config/nvim" ] && echo "Mova a pasta ~/.config/nvim antes de instalar" && exit
+# move old nvim directory if it exists
+[ -d "$HOME/.config/nvim" ] && echo "Move your folder ~/.config/nvim before installing" && exit
 
-echo "======Instalando dependencias======"
+echo "======Installing dependencies======"
 install
 
-echo "======Clone do repositorio======"
+echo "======Repository clone======"
 git clone https://github.com/micaelviana/nvim ~/.config/nvim
 
 printf "\n\n"
 
-echo "======Instalar o vim-plug======"
+echo "======Cloning vim-plug======"
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 printf "\n\n"
 
-echo "======Abrindo o neovim e instalando os plugins. AGUARDE======"
+echo "======Opening nvim to install plugins======"
+echo "======HOLD IT======"
 nvim +PlugInstall +qall
