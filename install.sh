@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#This code was based on the Lunarvim project installer https://github.com/ChristianChiarulli/LunarVim
+#This code is a fragment of the Lunarvim framework installer https://github.com/ChristianChiarulli/LunarVim
 
 installubuntu() {
 	sudo apt install nodejs npm curl git 
