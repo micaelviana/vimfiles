@@ -8,35 +8,35 @@
 "=======================================================================
 call plug#begin('~/.vim/plugged')
 "-----Basico----
-Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplete
-Plug 'jiangmiao/auto-pairs' "pares de parenteses
-Plug 'ctrlpvim/ctrlp.vim' "Ctrlp para navegar por arquivos
-Plug 'preservim/nerdtree' "Barra lateral
-Plug 'itchyny/lightline.vim' "Barra inferior
-Plug 'preservim/nerdcommenter' "assistente para  inserir comentarios
-Plug 'sheerun/vim-polyglot' "Sinxtaxe de diversas linguagens de programacao
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete
+Plug 'jiangmiao/auto-pairs' "Insert parens in pair
+Plug 'ctrlpvim/ctrlp.vim' "Fuzzy file finder
+Plug 'preservim/nerdtree' "Sidebar
+Plug 'itchyny/lightline.vim' "Lightline statusbar
+Plug 'preservim/nerdcommenter' "Assistant to insert comments
+Plug 'sheerun/vim-polyglot' "Syntax of various languages for VIM
 "-----Snippets----
-Plug 'SirVer/ultisnips' "Criar novos snippets
-Plug 'honza/vim-snippets' "Arquivos de snippets para vários linguagens
+Plug 'SirVer/ultisnips' "Create new snippets
+Plug 'honza/vim-snippets' "Collection of snippets for various languages
 "-----Temas----
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'rakr/vim-one'
 "-----Extras----
-Plug 'christoomey/vim-tmux-navigator' "navegação mais amigável pelos splits
-Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiplos cursores
+Plug 'christoomey/vim-tmux-navigator' "More friendly navigation between splits
+Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
 Plug 'mhinz/vim-startify' "Start screen
 Plug 'psliwka/vim-smoothie' "Smooth scrolling for Vim done right
-Plug 'ryanoasis/vim-devicons' "icones para o Vim, funciona com nerdfonts
+Plug 'ryanoasis/vim-devicons' "Icons for VIM
 call plug#end()
 
 "----------CONFIGURACOES GERAIS----------
-set hidden "manter multiplos buffers abertos
-set number relativenumber "mostrar numeros das linhas
-set cursorline "destaca linha do cursor
-set mouse=a "habilita interacao com o mouse
-set ignorecase "desativa case sensitive na pesquisa e nos comandos do vim
-set inc=split "preview de comandos
-set splitright splitbelow "define pra que lado se abrem os splits 
+set hidden "Keep multiple buffers open
+set number relativenumber "Display line numbers
+set cursorline "highlit cursor line
+set mouse=a "enable mouse interaction
+set ignorecase "disable case sensitive in search and commands
+set inc=split "command preview
+set splitright splitbelow "define which way the splits open
 syntax enable "colorir corretamente a sintaxe de linguagens
 set clipboard=unnamedplus "clipboard entre o neovim e os outros progranas
 set expandtab shiftwidth=4 autoindent "tabs expandem para 4 espacos, manter indentacao da linha anterior
