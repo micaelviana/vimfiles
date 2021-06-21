@@ -37,16 +37,16 @@ set mouse=a "enable mouse interaction
 set ignorecase "disable case sensitive in search and commands
 set inc=split "command preview
 set splitright splitbelow "define which way the splits open
-syntax enable "colorir corretamente a sintaxe de linguagens
-set clipboard=unnamedplus "clipboard entre o neovim e os outros progranas
-set expandtab shiftwidth=4 autoindent "tabs expandem para 4 espacos, manter indentacao da linha anterior
-if has('termguicolors')  "habilitar cores do terminal
+syntax enable "Correctly color the syntax of languages
+set clipboard=unnamedplus "Copy/paste between vim and other programs.
+set expandtab shiftwidth=4 autoindent "tabs expand to 4 spaces, keed previous line indentation 
+if has('termguicolors')  "enable terminal colors
     set termguicolors  
 endif
 
-autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Abrir arquivos de imagens a partir do Vim no Linux
+autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Open images from VIM on Linux
 
-"definicao de tema
+"theme definition
 "let g:material_terminal_italics = 1
 "let g:material_theme_style = 'darker'
 " colorscheme material
@@ -56,34 +56,34 @@ set background=dark " for the dark version
 " set background=light " for the light version
 let g:one_allow_italics = 1 " I love italic for comments
 
-"----------DEFINICAO DE TECLAS DE ATALHO ----------
-"leader+s para salvar, ctrl+x para fechar, ctrl+a seleciona tudo
+"----------SHORTCUTS DEFINITION----------
+"leader+s to save changes, ctrl+x to close, ctrl+a to select the entire text
 nnoremap <leader>s :w <cr>
 nnoremap <silent> <c-x> :x <cr>
 map <C-a> <esc>ggVG<CR>
-"atalhos para splits (de YADR dotfiles)
+"shortcut to  splits (from YADR dotfiles)
 nnoremap <silent> ss <C-w>s
 nnoremap <silent> vv <C-w>v
 "recarregar o Vim File 
 nnoremap <leader>rv :source $HOME/.config/nvim/init.vim <cr>
 
-"----------CONFIGURACOES DE PLUGINS----------
-"NERDTree: ativar e desativar a barra
+"----------PLUGIN SETTINGS----------
+"NERDTree
 map <C-t> :NERDTreeToggle<CR>
 
-"lightline
-set noshowmode "pra nao ficar redundante no modo de insercao
+"Lightline
+set noshowmode "to be not redundant in insert mode
 "definicao de tema
 let g:lightline = { 'colorscheme': 'one' }
 
-"NERDCommenter: comentar e descomentar linhas
+"NERDCommenter: comment and uncomment lines
 map // <plug>NERDCommenterToggle
 
-"UltiSnips: habilitar split para edicao de snippet
+"UltiSnips: enable split to editing snippet
 let g:UltiSnipsEditSplit='vertical'
 
-"Preferências do Startify
-"Baseado em: https://github.com/benbrastmckie/.config/
+"Startify
+"Based on: https://github.com/benbrastmckie/.config/
 
 let g:startify_custom_header = [
  \ '███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ',
@@ -112,7 +112,7 @@ endfunction
 
     
 "=============================================================================================================
-"FROM CONQUER OF COMPLETION
+"CONQUER OF COMPLETION RECOMENDATIONS
 if has('unix')
     source $HOME/.config/nvim/coc.vim
 else
