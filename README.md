@@ -1,12 +1,12 @@
 # Neovim Dotfiles
 
-## Quick Install para Linux
+## Quick Install for Linux
 
 ``` bash <(curl -s https://raw.githubusercontent.com/micaelviana/nvim/master/install.sh) ```
 
-## Uso
+## Usage
 
-1. Clone do repositório:
+1. Clone the repository:
 
     **Linux**:
 
@@ -16,7 +16,7 @@
    
    ``` git clone https://github.com/micaelviana/nvim $env:USERPROFILE\AppData\Local\nvim```
 
-2. Instalar o vim-plug:
+2. Install vim-plug:
 
     **Linux**:
 
@@ -27,10 +27,10 @@
    ```Invoke-WebRequest -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     New-Item "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force```
 
-3. Resolver dependências:
+3. Solve dependencies:
 
    [Nodejs](https://nodejs.org/en/download/)
    
-4. Instalar os plugins:
+4. Install plugins:
 
     ```nvim +PlugInstall +qall``` 
