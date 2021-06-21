@@ -1,5 +1,5 @@
 " extensions
-let g:coc_global_extensions = ['coc-snippets']
+let g:coc_global_extensions = ['coc-snippets','coc-pairs']
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
