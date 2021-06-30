@@ -7,7 +7,7 @@
  "|_| \_|______\____/   \/   |_____|_|  |_|
 "=======================================================================
 call plug#begin('~/.vim/plugged')
-"-----Basico----
+"-----Basic----
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete
 "Plug 'jiangmiao/auto-pairs' "Insert parens in pair
 Plug 'ctrlpvim/ctrlp.vim' "Fuzzy file finder
@@ -54,7 +54,7 @@ autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Open im
 colorscheme one
 set background=dark " for the dark version
 " set background=light " for the light version
-let g:one_allow_italics = 1 " I love italic for comments
+let g:one_allow_italics = 1 " italic for comments
 
 "----------SHORTCUTS DEFINITION----------
 "leader+s to save changes, ctrl+x to close, ctrl+a to select the entire text
