@@ -29,7 +29,7 @@ Plug 'psliwka/vim-smoothie' "Smooth scrolling for Vim done right
 Plug 'ryanoasis/vim-devicons' "Icons for VIM
 call plug#end()
 
-"----------CONFIGURACOES GERAIS----------
+"----------GENERAL----------
 set hidden "Keep multiple buffers open
 set number relativenumber "Display line numbers
 set cursorline "highlit cursor line
