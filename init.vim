@@ -51,6 +51,7 @@ autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Open im
 "let g:material_theme_style = 'darker'
 " colorscheme material
 
+
 colorscheme one
 set background=dark " for the dark version
 " set background=light " for the light version
