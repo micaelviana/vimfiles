@@ -65,8 +65,10 @@ map <C-a> <esc>ggVG<CR>
 "shortcut to  splits (from YADR dotfiles)
 nnoremap <silent> ss <C-w>s
 nnoremap <silent> vv <C-w>v
-"recarregar o Vim File 
+"reload Vim File 
 nnoremap <leader>rv :source $HOME/.config/nvim/init.vim <cr>
+"shortcut for switch between modes faster
+imap jj <Esc>
 
 "----------PLUGIN SETTINGS----------
 "NERDTree
