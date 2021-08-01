@@ -86,7 +86,6 @@ let g:UltiSnipsEditSplit='vertical'
 
 "Startify
 "Based on: https://github.com/benbrastmckie/.config/
-
 let g:startify_custom_header = [
  \ '███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ',
  \ '████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ',
