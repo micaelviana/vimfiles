@@ -76,7 +76,7 @@ map <C-t> :NERDTreeToggle<CR>
 
 "Lightline
 set noshowmode "to be not redundant in insert mode
-"definicao de tema
+"theme definition
 let g:lightline = { 'colorscheme': 'one' }
 
 "NERDCommenter: comment and uncomment lines
