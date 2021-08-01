@@ -116,8 +116,4 @@ endfunction
     
 "=============================================================================================================
 "CONQUER OF COMPLETION RECOMENDATIONS
-if has('unix')
-    source $HOME/.config/nvim/coc.vim
-else
-    source C:/Users/Micael/AppData/Local/nvim/coc.vim
-endif
+source $HOME/.config/nvim/coc.vim
