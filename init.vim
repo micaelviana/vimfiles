@@ -9,7 +9,6 @@
 call plug#begin('~/.vim/plugged')
 "-----Basic----
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete
-"Plug 'jiangmiao/auto-pairs' "Insert parens in pair
 Plug 'ctrlpvim/ctrlp.vim' "Fuzzy file finder
 Plug 'preservim/nerdtree' "Sidebar
 Plug 'itchyny/lightline.vim' "Lightline statusbar
