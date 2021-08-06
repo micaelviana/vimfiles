@@ -67,7 +67,7 @@ nnoremap <silent> vv <C-w>v
 "reload Vim File 
 nnoremap <leader>rv :source $HOME/.config/nvim/init.vim <cr>
 "shortcut for switch between modes faster
-imap jj <Esc>
+imap ii <Esc>
 
 "----------PLUGIN SETTINGS----------
 "NERDTree
