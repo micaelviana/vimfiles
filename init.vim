@@ -69,6 +69,7 @@ nnoremap <silent> vv <C-w>v
 nnoremap <leader>rv :source $HOME/.config/nvim/init.vim <cr>
 "shortcut for switch between modes faster
 imap ii <Esc>
+"replace selected content faster
 nnoremap <leader>r :%s///g<Left><Left>
 
 "----------PLUGIN SETTINGS----------
