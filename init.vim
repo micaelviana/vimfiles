@@ -57,7 +57,7 @@ set background=dark " for the dark version
 " set background=light " for the light version
 let g:one_allow_italics = 1 " italic for comments
 
-"----------SHORTCUTS DEFINITION----------
+"----------KEYMAPPINGS----------
 "leader+s to save changes, ctrl+x to close, ctrl+a to select the entire text
 nnoremap <leader>s :w <cr>
 nnoremap <silent> <c-x> :x <cr>
@@ -69,6 +69,7 @@ nnoremap <silent> vv <C-w>v
 nnoremap <leader>rv :source $HOME/.config/nvim/init.vim <cr>
 "shortcut for switch between modes faster
 imap ii <Esc>
+nnoremap <leader>r :%s///g<Left><Left>
 
 "----------PLUGIN SETTINGS----------
 "NERDTree
