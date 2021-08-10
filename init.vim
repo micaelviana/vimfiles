@@ -26,6 +26,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
 Plug 'mhinz/vim-startify' "Start screen
 Plug 'psliwka/vim-smoothie' "Smooth scrolling for Vim done right
 Plug 'ryanoasis/vim-devicons' "Icons for VIM
+Plug 'hvya14busa/is.vim' "Automatically clear highlight after cursor moved 
 call plug#end()
 
 "----------GENERAL----------
