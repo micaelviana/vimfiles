@@ -66,7 +66,9 @@ map <C-a> <esc>ggVG<CR>
 nnoremap <silent> ss <C-w>s
 nnoremap <silent> vv <C-w>v
 "reload Vim File 
-nnoremap <leader>rv :source $HOME/.config/nvim/init.vim <cr>
+nnoremap <silent><leader>rv :source $HOME/.config/nvim/init.vim <cr>
+"edit  vim file
+nnoremap <silent><leader>ev :tabnew $MYVIMRC <cr>
 "shortcut for switch between modes faster
 imap ii <Esc>
 "replace selected content faster
