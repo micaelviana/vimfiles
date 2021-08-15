@@ -73,6 +73,9 @@ nnoremap <silent><leader>ev :tabnew $MYVIMRC <cr>
 imap ii <Esc>
 "replace selected content faster
 nnoremap <leader>r :%s///g<Left><Left>
+" Prevent x from overriding what's in the clipboard.
+noremap x "_x
+noremap X "_x
 
 "----------PLUGIN SETTINGS----------
 "NERDTree
