@@ -9,6 +9,7 @@
 call plug#begin('~/.vim/plugged')
 "-----Basic----
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete
+Plug 'cohama/lexima.vim' "Auto close parentheses
 Plug 'ctrlpvim/ctrlp.vim' "Fuzzy file finder
 Plug 'preservim/nerdtree' "Sidebar
 Plug 'itchyny/lightline.vim' "Lightline statusbar
