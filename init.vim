@@ -71,7 +71,7 @@ nnoremap <silent><leader>rv :source $HOME/.config/nvim/init.vim <cr>
 "edit  vim file
 nnoremap <silent><leader>ev :tabnew $MYVIMRC <cr>
 "shortcut for switch between modes faster
-imap ii <Esc>
+imap jj <Esc>
 "replace selected content faster
 nnoremap <leader>r :%s///g<Left><Left>
 " Prevent x from overriding what's in the clipboard.
