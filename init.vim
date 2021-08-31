@@ -28,6 +28,8 @@ Plug 'mhinz/vim-startify' "Start screen
 Plug 'psliwka/vim-smoothie' "Smooth scrolling for Vim done right
 Plug 'ryanoasis/vim-devicons' "Icons for VIM
 Plug 'hvya14busa/is.vim' "Automatically clear highlight after cursor moved 
+" Inside the Vim-Plug block on your .vimrc
+Plug 'ekalinin/Dockerfile.vim'
 call plug#end()
 
 "----------GENERAL----------
@@ -39,7 +41,7 @@ set ignorecase "disable case sensitive in search and commands
 set inc=split "command preview
 set splitright splitbelow "define which way the splits open
 syntax enable "Correctly color the syntax of languages
-set clipboard=unnamedplus "Copy/paste between vim and other programs.
+set clipboard+=unnamedplus "Copy/paste between vim and other programs.
 set expandtab shiftwidth=4 autoindent "tabs expand to 4 spaces, keed previous line indentation 
 if has('termguicolors')  "enable terminal colors
     set termguicolors  
@@ -59,9 +61,10 @@ set background=dark " for the dark version
 let g:one_allow_italics = 1 " italic for comments
 
 "----------KEYMAPPINGS----------
-"leader+s to save changes, ctrl+x to close, ctrl+a to select the entire text
-nnoremap <leader>s :w <cr>
-nnoremap <silent> <c-x> :x <cr>
+"leader+s to save changes,ctrl+a to select the entire text
+let mapleader = " "
+nnoremap <leader>w :wq <cr>
+nnoremap <leader>q :q <cr>
 map <C-a> <esc>ggVG<CR>
 "shortcut to  splits (from YADR dotfiles)
 nnoremap <silent> ss <C-w>s
@@ -72,6 +75,7 @@ nnoremap <silent><leader>rv :source $HOME/.config/nvim/init.vim <cr>
 nnoremap <silent><leader>ev :tabnew $MYVIMRC <cr>
 "shortcut for switch between modes faster
 imap jj <Esc>
+imap JJ <Esc>
 "replace selected content faster
 nnoremap <leader>r :%s///g<Left><Left>
 " Prevent x from overriding what's in the clipboard.
@@ -123,4 +127,6 @@ endfunction
     
 "=============================================================================================================
 "CONQUER OF COMPLETION RECOMENDATIONS
-source $HOME/.config/nvim/coc.vim
+"source $HOME/.config/nvim/coc.vim
+
+let g:coc_global_extensions = ['coc-snippets', 'coc-json']
