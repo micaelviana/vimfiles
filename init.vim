@@ -27,9 +27,9 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
 Plug 'mhinz/vim-startify' "Start screen
 Plug 'psliwka/vim-smoothie' "Smooth scrolling for Vim done right
 Plug 'ryanoasis/vim-devicons' "Icons for VIM
-Plug 'hvya14busa/is.vim' "Automatically clear highlight after cursor moved 
-" Inside the Vim-Plug block on your .vimrc
-Plug 'ekalinin/Dockerfile.vim'
+Plug 'ekalinin/Dockerfile.vim' "for dockerfile syntax
+Plug 'drzel/vim-gui-zoom' "for neovim gui,able to zoom in and out like in my terminal.
+
 call plug#end()
 
 "----------GENERAL----------
@@ -47,8 +47,8 @@ if has('termguicolors')  "enable terminal colors
     set termguicolors  
 endif
 
+autocmd BufEnter * silent! lcd %:p:h "change directory automaticcaly
 autocmd BufEnter *.png,*.jpg,*gif exec "! xdg-open ".expand("%" ) | :bw "Open images from VIM on Linux
-
 "theme definition
 "let g:material_terminal_italics = 1
 "let g:material_theme_style = 'darker'
@@ -61,17 +61,19 @@ set background=dark " for the dark version
 let g:one_allow_italics = 1 " italic for comments
 
 "----------KEYMAPPINGS----------
-"leader+s to save changes,ctrl+a to select the entire text
+"set mapleader
 let mapleader = " "
-nnoremap <leader>w :wq <cr>
-nnoremap <leader>q :q <cr>
+"save and close
+nnoremap <leader>w :w <cr>
+nnoremap <leader>q :x <cr>
+"select the entire document
 map <C-a> <esc>ggVG<CR>
 "shortcut to  splits (from YADR dotfiles)
 nnoremap <silent> ss <C-w>s
 nnoremap <silent> vv <C-w>v
 "reload Vim File 
 nnoremap <silent><leader>rv :source $HOME/.config/nvim/init.vim <cr>
-"edit  vim file
+"edit  vim file in a new tab
 nnoremap <silent><leader>ev :tabnew $MYVIMRC <cr>
 "shortcut for switch between modes faster
 imap jj <Esc>
@@ -130,3 +132,5 @@ endfunction
 "source $HOME/.config/nvim/coc.vim
 
 let g:coc_global_extensions = ['coc-snippets', 'coc-json']
+let g:coc_node_path = '/home/micael/.asdf/shims/node'
+
