@@ -64,8 +64,8 @@ let g:one_allow_italics = 1 " italic for comments
 "set mapleader
 let mapleader = " "
 "save and close
-nnoremap <leader>w :w <cr>
-nnoremap <leader>q :x <cr>
+nnoremap <silent><leader>w :w <cr>
+nnoremap <silent><leader>q :x <cr>
 "select the entire document
 map <C-a> <esc>ggVG<CR>
 "shortcut to  splits (from YADR dotfiles)
@@ -126,11 +126,6 @@ function! StartifyEntryFormat()
         return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
 endfunction
 
-    
-"=============================================================================================================
-"CONQUER OF COMPLETION RECOMENDATIONS
+"Conquer of completion
 "source $HOME/.config/nvim/coc.vim
-
-let g:coc_global_extensions = ['coc-snippets', 'coc-json']
-let g:coc_node_path = '/home/micael/.asdf/shims/node'
-
+let g:coc_global_extensions = ['coc-snippets', 'coc-json', 'coc-pyright']
