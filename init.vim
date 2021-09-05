@@ -29,6 +29,7 @@ Plug 'psliwka/vim-smoothie' "Smooth scrolling for Vim done right
 Plug 'ryanoasis/vim-devicons' "Icons for VIM
 Plug 'ekalinin/Dockerfile.vim' "for dockerfile syntax
 Plug 'drzel/vim-gui-zoom' "for neovim gui,able to zoom in and out like in my terminal.
+Plug 'https://github.com/pseewald/vim-anyfold' "fold files decently
 
 call plug#end()
 
@@ -129,3 +130,13 @@ endfunction
 "Conquer of completion
 "source $HOME/.config/nvim/coc.vim
 let g:coc_global_extensions = ['coc-snippets', 'coc-json', 'coc-pyright']
+
+
+"Anyfold
+filetype plugin indent on " required
+syntax on                 " required
+
+autocmd Filetype * AnyFoldActivate               " activate for all filetypes
+" or
+autocmd Filetype <your-filetype> AnyFoldActivate " activate for a specific filetype
+set foldlevel=99 " Open all folds
