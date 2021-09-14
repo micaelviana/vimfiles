@@ -8,7 +8,12 @@
 "=======================================================================
 call plug#begin('~/.vim/plugged')
 "-----Basic----
-Plug 'neoclide/coc.nvim', {'branch': 'release'} "Autocomplete
+"Autocomplete and a lot of other things
+if has('node')
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  let g:coc_global_extensions = ['coc-snippets', 'coc-json', 'coc-pyright']
+endif
+
 Plug 'cohama/lexima.vim' "Auto close parentheses
 Plug 'ctrlpvim/ctrlp.vim' "Fuzzy file finder
 Plug 'preservim/nerdtree' "Sidebar
@@ -126,11 +131,6 @@ let g:webdevicons_enable_startify = 1
 function! StartifyEntryFormat()
         return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
 endfunction
-
-"Conquer of completion
-"source $HOME/.config/nvim/coc.vim
-let g:coc_global_extensions = ['coc-snippets', 'coc-json', 'coc-pyright']
-
 
 "Anyfold
 filetype plugin indent on " required
