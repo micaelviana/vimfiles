@@ -3,11 +3,11 @@
 #This code is a fragment with some changes of Lunarvim framework installer https://github.com/ChristianChiarulli/LunarVim
 
 installubuntu() {
-	sudo apt install nodejs npm curl git 
+	sudo apt install curl git 
 }
 
 installarch() {
-	sudo pacman -S --needed nodejs npm curl git python-pynvim
+	sudo pacman -S --needed curl git python-pynvim
 }
 
 install() {
@@ -37,3 +37,9 @@ printf "\n\n"
 echo "======Opening nvim to install plugins======"
 echo "======HOLD IT======"
 nvim +PlugInstall +qall
+
+if which node > /dev/null; then
+	echo "Everything is ready"
+else
+	echo "This configuration works best if you have nodejs installed. Please check out: https://nodejs.org/en/"
+fi
