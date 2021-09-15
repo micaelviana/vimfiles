@@ -46,7 +46,6 @@ set mouse=a "enable mouse interaction
 set ignorecase "disable case sensitive in search and commands
 set inc=split "command preview
 set splitright splitbelow "define which way the splits open
-syntax enable "Correctly color the syntax of languages
 set clipboard+=unnamedplus "Copy/paste between vim and other programs.
 set expandtab shiftwidth=4 autoindent "tabs expand to 4 spaces, keed previous line indentation 
 if has('termguicolors')  "enable terminal colors
