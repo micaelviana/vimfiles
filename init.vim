@@ -9,7 +9,7 @@
 call plug#begin('~/.vim/plugged')
 "-----Basic----
 "Autocomplete and a lot of other things
-if has('node')
+if executable('node')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   let g:coc_global_extensions = ['coc-snippets', 'coc-json', 'coc-pyright']
 endif
