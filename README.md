@@ -1,6 +1,6 @@
 # Neovim Dotfiles
 
-## Quick Install for Linux
+## Quick Install for Linux(Available for debian-based and arch-based distros)
 
 ``` bash <(curl -s https://raw.githubusercontent.com/micaelviana/nvim/master/install.sh) ```
 
