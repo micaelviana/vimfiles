@@ -20,11 +20,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdtree' "Sidebar
     Plug 'sheerun/vim-polyglot' "while Treesitter is not here
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Multiple cursors
-    Plug 'psliwka/vim-smoothie' "Smooth scrolling for Vim done right
     Plug 'numToStr/Comment.nvim' "comment plugin for neovim.
     Plug 'haya14busa/is.vim' "is.vim - incremental search improved
-    Plug 'SirVer/ultisnips' "Create new snippets
-    Plug 'honza/vim-snippets' "Collection of snippets for various languages
     Plug 'unblevable/quick-scope' "moving horizontally
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "fuzzy file finder
     Plug 'junegunn/fzf.vim'
