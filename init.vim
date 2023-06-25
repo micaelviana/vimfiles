@@ -24,6 +24,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-sensible' 
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
     Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
     Plug 'preservim/nerdtree' 
     Plug 'nvim-treesitter/nvim-treesitter' 
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} 
