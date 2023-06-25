@@ -1,7 +1,7 @@
-nnoremap <c-p> :Telescope find_files <CR>
-nmap tf :Telescope find_files <CR>
+nnoremap <c-p> :Telescope find_files hidden=true <CR>
+nnoremap tf :Telescope find_files hidden=true <CR>
 
-nmap tb :Telescope buffers <CR>
+nnoremap tb :Telescope buffers <CR>
 
 nnoremap <c-r> :Telescope oldfiles<CR>
-nmap tr :Telescope oldfiles <CR>
+nnoremap tr :Telescope oldfiles <CR>
