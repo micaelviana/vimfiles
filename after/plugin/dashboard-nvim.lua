@@ -1,4 +1,4 @@
-local status, db = pcall(require, "dashboard")
+local _, db = pcall(require, "dashboard")
 db.setup({
   theme = 'doom',
   config = {
@@ -37,6 +37,13 @@ db.setup({
         action = 'Telescope find_files'
       },
       {
+        icon = '  ',
+        desc = 'Configuration',
+        key = 'c',
+        keymap = ':e $MYVIMRC',
+        action = 'edit ~/.config/nvim/init.vim'
+      },
+      {
         icon = ' 󰜎 ',
         desc = 'Quit neovim',
         key = 'q',
@@ -44,6 +51,6 @@ db.setup({
         action = 'quit'
       }
     },
-    footer = {"Footer"}  --your footer
+    footer = {}  --your footer
   }
 })
