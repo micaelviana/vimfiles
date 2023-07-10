@@ -18,8 +18,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'EdenEast/nightfox.nvim'
     Plug 'haishanh/night-owl.vim'
     Plug 'folke/tokyonight.nvim'
-
-    Plug 'itchyny/lightline.vim' 
+    Plug 'nvim-lualine/lualine.nvim'
     Plug 'phaazon/hop.nvim' 
     Plug 'tpope/vim-sensible' 
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
