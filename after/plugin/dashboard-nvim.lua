@@ -44,6 +44,6 @@ db.setup({
         action = 'quit'
       }
     },
-    footer = {"blah blah blah"}  --your footer
+    footer = {"Footer"}  --your footer
   }
 })
