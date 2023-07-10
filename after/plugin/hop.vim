@@ -1,2 +1,2 @@
 lua require('hop').setup{}
-noremap H :HopWord <cr>
+nnoremap <space>h :HopWord 
