@@ -35,8 +35,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'glepnir/dashboard-nvim'
     Plug 'christoomey/vim-tmux-navigator'
     "Candy
-    Plug 'nvim-tree/nvim-web-devicons'
     Plug 'ryanoasis/vim-devicons'
+    Plug 'nvim-tree/nvim-web-devicons'
 call plug#end()
 "----------END (PLUGIN MANAGER)
 
