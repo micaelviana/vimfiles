@@ -27,14 +27,14 @@ db.setup({
         desc = 'Recent Files',
         key = 'r',
         keymap = 'Ctrl r',
-        action = 'Telescope oldfiles'
+        action = 'FzfLua oldfiles'
       },
       {
         icon = '  ',
         desc = 'Find Files',
         key = 'f',
         keymap = 'Ctrl p',
-        action = 'Telescope find_files'
+        action = 'FzfLua files'
       },
       {
         icon = '  ',
