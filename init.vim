@@ -96,11 +96,11 @@ let mapleader = " "
 "save and close
 nnoremap <silent><leader>w :w <cr>
 nnoremap <silent><leader>W :w <cr>
-nnoremap <silent><leader>q :wq <cr>
+nnoremap <silent><leader>q :xa <cr>
 nnoremap <silent> \w :w <cr>
 nnoremap <silent> \W :w <cr>
-nnoremap <silent> \q :wq <cr>
-nnoremap <silent> \Q :wq <cr>
+nnoremap <silent> \q :xa <cr>
+nnoremap <silent> \Q :xa <cr>
 nnoremap <silent> \z :xa <cr>
 nnoremap <silent> \Z :xa <cr>
 "paste in insert mode using Ctrl+V
