@@ -1,4 +1,7 @@
-local _, db = pcall(require, "dashboard")
+local ok, db = pcall(require, "dashboard")
+
+if (not ok) then return end
+
 db.setup({
   theme = 'doom',
   config = {
