@@ -143,7 +143,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <space>d  :<C-u>CocList diagnostics<cr>
 " Manage extensions
 nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands
@@ -160,4 +160,4 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 
-let g:coc_global_extensions = ['coc-json', 'coc-pairs', 'coc-clangd', 'coc-snippets', 'coc-pyright', 'coc-vimlsp','coc-sh']
+let g:coc_global_extensions = ['coc-pairs', 'coc-snippets','coc-json', 'coc-clangd', 'coc-pyright', 'coc-vimlsp','coc-sh']
