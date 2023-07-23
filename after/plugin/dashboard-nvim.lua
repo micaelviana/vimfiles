@@ -1,7 +1,8 @@
 local ok, db = pcall(require, "dashboard")
-
 if (not ok) then return end
-local footer=os.getenv('FOOTER')
+--the environment variable FOOTER has the nvim version
+local footer = os.getenv('NEOVIM_FOOTER')
+
 db.setup({
   theme = 'doom',
   config = {
