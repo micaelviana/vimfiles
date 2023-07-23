@@ -78,6 +78,8 @@ augroup END
 augroup GuiCursor
       autocmd VimLeave * set guicursor=a:ver30-blinkoff300
 augroup END
+"highlight yank
+au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=150}
 
 
 "---------------FUNCTIONS
