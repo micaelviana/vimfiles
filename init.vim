@@ -17,7 +17,7 @@ call plug#begin('~/.vim/plugged')
     "Themes
     Plug 'EdenEast/nightfox.nvim'
     Plug 'haishanh/night-owl.vim'
-    Plug 'folke/tokyonight.nvim'
+    Plug 'sainnhe/sonokai'
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'phaazon/hop.nvim' 
     Plug 'tpope/vim-sensible' 
@@ -126,4 +126,6 @@ noremap <Del> "_x
 "Tip(I always forget)
 "Press ^ to go to the first non white space character on the line.
 "Press g_ to go to the last non whitespace character in the line.
-colorscheme tokyonight-storm
+let g:sonokai_style = 'espresso'
+let g:sonokai_better_performance = 1
+colorscheme sonokai
