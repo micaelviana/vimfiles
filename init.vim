@@ -126,6 +126,6 @@ noremap <Del> "_x
 "Tip(I always forget)
 "Press ^ to go to the first non white space character on the line.
 "Press g_ to go to the last non whitespace character in the line.
-let g:sonokai_style = 'espresso'
+" let g:sonokai_style = 'atlantis'
 let g:sonokai_better_performance = 1
 colorscheme sonokai
