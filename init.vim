@@ -79,7 +79,7 @@ augroup GuiCursor
       autocmd VimLeave * set guicursor=a:ver30-blinkoff300
 augroup END
 "highlight yank
-au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=150}
+au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=40}
 
 
 "---------------FUNCTIONS
@@ -97,6 +97,7 @@ let mapleader = " "
 nnoremap <silent><leader>w :w <cr>
 nnoremap <silent><leader>W :w <cr>
 nnoremap <silent><leader>q :xa <cr>
+nnoremap <silent><leader>Q :xa <cr>
 nnoremap <silent> \w :w <cr>
 nnoremap <silent> \W :w <cr>
 nnoremap <silent> \q :xa <cr>
@@ -126,6 +127,15 @@ noremap <Del> "_x
 "Tip(I always forget)
 "Press ^ to go to the first non white space character on the line.
 "Press g_ to go to the last non whitespace character in the line.
-" let g:sonokai_style = 'atlantis'
+let g:sonokai_style = 'default'
 let g:sonokai_better_performance = 1
-colorscheme sonokai
+
+if !empty($VIMBACKGROUND)
+    set background = "$VIMBACKGROUND"
+    colorscheme $VIMCOLOR
+else
+    set background=dark
+    colorscheme nordfox
+endif
+
+

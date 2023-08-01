@@ -1,6 +1,8 @@
 local ok, db = pcall(require, "dashboard")
 if (not ok) then return end
 
+local footer=os.getenv("VIMFOOTER")
+
 db.setup({
   theme = 'doom',
   config = {
@@ -19,40 +21,40 @@ db.setup({
     center = {
       {
         icon = '  ',
-        desc = 'New File',
+        desc = '[N]ew File',
         key = 'n',
         keymap = ':enew',
         action = 'enew'
       },
       {
         icon = ' 󰁯 ',
-        desc = 'Recent Files',
+        desc = '[R]ecent Files',
         key = 'r',
         keymap = 'Ctrl r',
         action = 'FzfLua oldfiles'
       },
       {
         icon = '  ',
-        desc = 'Find Files',
+        desc = '[F]ind Files',
         key = 'f',
         keymap = 'Ctrl p',
         action = 'FzfLua files'
       },
       {
         icon = '  ',
-        desc = 'Configuration',
+        desc = '[C]onfiguration',
         key = 'c',
         keymap = ':e $MYVIMRC',
         action = 'edit ~/.config/nvim/init.vim'
       },
       {
         icon = ' 󰜎 ',
-        desc = 'Quit neovim',
+        desc = '[Q]uit neovim',
         key = 'q',
         keymap = ':quit',
         action = 'quit'
       }
     },
-    footer = {}  --your footer
+    footer = {footer}  --your footer
   }
 })
