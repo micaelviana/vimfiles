@@ -84,8 +84,6 @@ au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeou
 "---------------COMMANDS
 "remove M^ characters
 command WindowsCleaning %s/\r/
-"saving with sudo
-command Sudosave w !sudo tee%
 
 "---------------FUNCTIONS
 "command to change the working directory to the directory of the current file
