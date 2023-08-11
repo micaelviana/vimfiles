@@ -81,6 +81,11 @@ augroup END
 "highlight yank
 au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=40}
 
+"---------------COMMANDS
+"remove M^ characters
+command WindowsCleaning %s/\r/
+"saving with sudo
+command Sudosave w !sudo tee%
 
 "---------------FUNCTIONS
 "command to change the working directory to the directory of the current file
