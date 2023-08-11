@@ -95,15 +95,12 @@ nnoremap<space>z :call ChangeCurrentDirectory()  <cr>
 let mapleader = " "
 "save and close
 nnoremap <silent><leader>w :w <cr>
-nnoremap <silent><leader>W :w <cr>
 nnoremap <silent><leader>q :xa <cr>
-nnoremap <silent><leader>Q :xa <cr>
 nnoremap <silent> \w :w <cr>
-nnoremap <silent> \W :w <cr>
 nnoremap <silent> \q :xa <cr>
-nnoremap <silent> \Q :xa <cr>
 nnoremap <silent> \z :xa <cr>
-nnoremap <silent> \Z :xa <cr>
+"make executable
+nnoremap <silent><space>x :!chmod +x %<cr>
 "paste in insert mode using Ctrl+V
 inoremap<c-v> <esc>pa
 "go to normal mode
