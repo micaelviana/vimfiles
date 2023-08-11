@@ -14,7 +14,6 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 "List of plugins
 call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'} 
-    "Themes
     Plug 'EdenEast/nightfox.nvim'
     Plug 'haishanh/night-owl.vim'
     Plug 'sainnhe/sonokai'
@@ -27,6 +26,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} 
     Plug 'psliwka/vim-smoothie' 
     Plug 'tpope/vim-commentary' 
+    Plug 'tpope/vim-fugitive'
     Plug 'haya14busa/is.vim' 
     Plug 'SirVer/ultisnips' 
     Plug 'honza/vim-snippets' 
