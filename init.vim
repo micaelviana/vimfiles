@@ -107,7 +107,7 @@ inoremap<c-v> <esc>pa
 nnoremap s :
 vnoremap s :
 "select all
-nnoremap \a ggVG
+nnoremap <c-a> ggVG
 "increment/decrement
 nnoremap + <c-a>
 nnoremap - <c-x>
