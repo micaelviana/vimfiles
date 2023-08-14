@@ -137,5 +137,3 @@ else
     set background=dark
     colorscheme nordfox
 endif
-
-
