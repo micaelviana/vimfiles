@@ -1,7 +1,7 @@
 local ok, db = pcall(require, "dashboard")
 if (not ok) then return end
 
-local footer=os.getenv("VIMFOOTER")
+local footer=os.getenv("vimfooter")
 
 db.setup({
   theme = 'doom',

@@ -130,9 +130,9 @@ noremap <Del> "_x
 let g:sonokai_style = 'default'
 let g:sonokai_better_performance = 1
 
-if !empty($VIMBACKGROUND)
-    set background = "$VIMBACKGROUND"
-    colorscheme $VIMCOLOR
+if !empty($vimbackground)
+    set background = "$vimbackground"
+    colorscheme $vimcolor
 else
     set background=dark
     colorscheme nordfox
