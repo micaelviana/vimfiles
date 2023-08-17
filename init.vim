@@ -28,7 +28,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-commentary' 
     Plug 'tpope/vim-fugitive'
     Plug 'haya14busa/is.vim' 
-    Plug 'SirVer/ultisnips' 
     Plug 'honza/vim-snippets' 
     Plug 'glepnir/dashboard-nvim'
     Plug 'christoomey/vim-tmux-navigator'
