@@ -22,6 +22,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-sensible' 
     Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
     Plug 'nvim-tree/nvim-tree.lua'
+    Plug 'tpope/vim-surround'
     Plug 'nvim-treesitter/nvim-treesitter' 
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} 
     Plug 'psliwka/vim-smoothie' 
