@@ -24,6 +24,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-tree/nvim-tree.lua'
     Plug 'tpope/vim-surround'
     Plug 'nvim-pack/nvim-spectre'
+    Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-treesitter/nvim-treesitter' 
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} 
     Plug 'psliwka/vim-smoothie' 
