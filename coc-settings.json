@@ -6,6 +6,7 @@
             "filetypes": ["sh"]
         }
     },
+    "snippets.userSnippetsDirectory": "~/.config/nvim/coc/ultisnips",
     "powershell.integratedConsole.showOnStartup": false,
     "suggest.noselect": false,
     "snippets.ultisnips.pythonPrompt": false,
