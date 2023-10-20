@@ -135,5 +135,5 @@ if !empty($vimbackground)
     colorscheme $vimcolor
 else
     set background=dark
-    colorscheme sonokai
+    colorscheme nordfox
 endif
