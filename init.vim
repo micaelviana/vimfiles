@@ -32,6 +32,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'haya14busa/is.vim' 
     Plug 'honza/vim-snippets' 
+    Plug 'lambdalisue/suda.vim'
     Plug 'glepnir/dashboard-nvim'
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'nvim-tree/nvim-web-devicons'
