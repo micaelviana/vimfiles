@@ -15,8 +15,10 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'} 
     Plug 'EdenEast/nightfox.nvim'
-    Plug 'haishanh/night-owl.vim'
+    Plug 'bluz71/vim-nightfly-colors', { 'as': 'nightfly' }
     Plug 'sainnhe/sonokai'
+    Plug 'rebelot/kanagawa.nvim'
+    Plug 'rose-pine/neovim', { 'as': 'rose-pine'}
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'phaazon/hop.nvim' 
     Plug 'tpope/vim-sensible' 
