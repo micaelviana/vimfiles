@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'bluz71/vim-nightfly-colors', { 'as': 'nightfly' }
     Plug 'sainnhe/sonokai'
     Plug 'rebelot/kanagawa.nvim'
+    Plug 'sainnhe/everforest'
     Plug 'rose-pine/neovim', { 'as': 'rose-pine'}
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'phaazon/hop.nvim' 
@@ -132,11 +133,9 @@ noremap <Del> "_x
 "Press g_ to go to the last non whitespace character in the line.
 let g:sonokai_style = 'default'
 let g:sonokai_better_performance = 1
-
-if !empty($vimbackground)
-    set background = "$vimbackground"
+let g:everforest_better_performance = 1
+if !empty($vimcolor)
     colorscheme $vimcolor
 else
-    set background=dark
     colorscheme nordfox
 endif
