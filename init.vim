@@ -47,7 +47,9 @@ set number relativenumber "Display line numbers
 set cursorline "highlit cursor line
 set mouse=a "enable mouse interaction
 set ignorecase "disable case sensitive in search and commands
-set inc=split "command preview
+if has('nvim')
+    set inc=split "command preview
+endif
 set splitright splitbelow "define which way the splits open
 set clipboard+=unnamedplus "Copy/paste between vim and other programs.
 "indentation
@@ -77,12 +79,10 @@ set nobackup nowritebackup noswapfile
 augroup OpenImages
       autocmd BufEnter *.png,*.jpg,*gif exec "! feh ".expand("%" ) | :bwipeout
 augroup END
-"Restore cursor shape after leaving Neovim
-augroup GuiCursor
-      autocmd VimLeave * set guicursor=a:ver30-blinkoff300
-augroup END
 "highlight yank
-au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=40}
+if has('nvim')
+    au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=40}
+endif
 
 "---------------COMMANDS
 "remove M^ characters
@@ -101,9 +101,9 @@ nnoremap<space>z :call ChangeCurrentDirectory()  <cr>
 let mapleader = " "
 "save and close
 nnoremap <silent><leader>w :w <cr>
-nnoremap <silent><leader>q :wq <cr>
+nnoremap <silent><leader>q :xa <cr>
 nnoremap <silent> \w :w <cr>
-nnoremap <silent> \q :wq <cr>
+nnoremap <silent> \q :xa <cr>
 nnoremap <silent> \z :xa <cr>
 "make executable
 nnoremap <silent><space>x :!chmod +x %<cr>
@@ -127,9 +127,6 @@ noremap x "_x
 noremap X "_x
 noremap <Del> "_x
 
-"Tip(I always forget)
-"Press ^ to go to the first non white space character on the line.
-"Press g_ to go to the last non whitespace character in the line.
 let g:sonokai_style = 'default'
 let g:sonokai_better_performance = 1
 let g:everforest_better_performance = 1
