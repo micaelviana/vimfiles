@@ -21,35 +21,35 @@ db.setup({
     center = {
       {
         icon = '  ',
-        desc = '[N]ew File',
+        desc = 'New File',
         key = 'n',
         keymap = ':enew',
         action = 'enew'
       },
       {
         icon = ' 󰁯 ',
-        desc = '[R]ecent Files',
+        desc = 'Recent Files',
         key = 'r',
         keymap = 'Ctrl r',
         action = 'FzfLua oldfiles'
       },
       {
         icon = '  ',
-        desc = '[F]ind Files',
+        desc = 'Find Files',
         key = 'f',
         keymap = 'Ctrl p',
         action = 'FzfLua files'
       },
       {
         icon = '  ',
-        desc = '[C]onfiguration',
+        desc = 'Configuration',
         key = 'c',
         keymap = ':e $MYVIMRC',
         action = 'edit ~/.config/nvim/init.vim'
       },
       {
         icon = ' 󰜎 ',
-        desc = '[Q]uit neovim',
+        desc = 'Quit neovim',
         key = 'q',
         keymap = ':quit',
         action = 'quit'
