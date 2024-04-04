@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'sainnhe/sonokai'
     Plug 'rose-pine/neovim', { 'as': 'rose-pine'}
     Plug 'sainnhe/everforest'
+    Plug 'lukas-reineke/indent-blankline.nvim'
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'phaazon/hop.nvim' 
     Plug 'tpope/vim-sensible' 
@@ -40,6 +41,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-tree/nvim-web-devicons'
 call plug#end()
 "----------END (PLUGIN MANAGER)
+
 
 "----------GENERAL----------
 set hidden "Keep multiple buffers open
