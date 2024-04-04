@@ -11,4 +11,5 @@
       },
       -- filetypes = vim.g.exclude_filetypes,
     },
+    indent = { char = "┊" },
   })
