@@ -27,6 +27,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-tree/nvim-tree.lua'
     Plug 'tpope/vim-surround'
     Plug 'nvim-pack/nvim-spectre'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-treesitter/nvim-treesitter' 
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} 
@@ -79,21 +80,21 @@ set nobackup nowritebackup noswapfile
 
 " WSL Clipboard
 " https://github.com/equalsraf/win32yank/releases {{{
-if(has('wsl'))
-    let g:clipboard = {
-                \   'name': 'win32yank-wsl',
-                \   'copy': {
-                \      '+': 'win32yank.exe -i --crlf',
-                \      '*': 'win32yank.exe -i --crlf',
-                \    },
-                \   'paste': {
-                \      '+': 'win32yank.exe -o --lf',
-                \      '*': 'win32yank.exe -o --lf',
-                \   },
-                \   'cache_enabled': 0,
-                \ }
-    " }}}
-endif
+" if(has('wsl'))
+"     let g:clipboard = {
+"                 \   'name': 'win32yank-wsl',
+"                 \   'copy': {
+"                 \      '+': 'win32yank.exe -i --crlf',
+"                 \      '*': 'win32yank.exe -i --crlf',
+"                 \    },
+"                 \   'paste': {
+"                 \      '+': 'win32yank.exe -o --lf',
+"                 \      '*': 'win32yank.exe -o --lf',
+"                 \   },
+"                 \   'cache_enabled': 0,
+"                 \ }
+"     " }}}
+" endif
 
 "---------------AUTOCOMMANDS
 "Open images from VIM on Linux
