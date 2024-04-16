@@ -120,9 +120,9 @@ nnoremap<space>z :call ChangeCurrentDirectory()  <cr>
 
 "----------KEYMAPS----------
 "set mapleader
+let mapleader = " "
 "new lines
 nnoremap <return> o<esc>
-let mapleader = " "
 "save and close
 nnoremap <silent><leader>w :w <cr>
 nnoremap <silent><leader>q :xa <cr>
