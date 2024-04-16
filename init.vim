@@ -120,6 +120,8 @@ nnoremap<space>z :call ChangeCurrentDirectory()  <cr>
 
 "----------KEYMAPS----------
 "set mapleader
+"new lines
+nnoremap <return> o<esc>
 let mapleader = " "
 "save and close
 nnoremap <silent><leader>w :w <cr>
@@ -130,7 +132,7 @@ nnoremap <silent> \z :xa <cr>
 "make executable
 nnoremap <silent><space>x :!chmod +x %<cr>
 "paste in insert mode using Ctrl+V
-inoremap<c-v> <esc>pa
+" inoremap<c-v> <esc>pa
 "go to normal mode
 nnoremap s :
 vnoremap s :
