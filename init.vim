@@ -132,7 +132,7 @@ nnoremap <silent> \z :xa <cr>
 "make executable
 nnoremap <silent><space>x :!chmod +x %<cr>
 "paste in insert mode using Ctrl+V
-" inoremap<c-v> <esc>pa
+inoremap<c-v> <esc>pa
 "go to normal mode
 nnoremap s :
 vnoremap s :
