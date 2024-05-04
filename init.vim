@@ -45,9 +45,7 @@ set number relativenumber "Display line numbers
 set cursorline "highlit cursor line
 set mouse=a "enable mouse interaction
 set ignorecase "disable case sensitive in search and commands
-if has('nvim')
-    set inc=split "command preview
-endif
+set inc=split "command preview
 set splitright splitbelow "define which way the splits open
 set clipboard+=unnamedplus "Copy/paste between vim and other programs.
 "indentation
@@ -72,7 +70,6 @@ endif
 " Disable all backup files
 set nobackup nowritebackup noswapfile
 
-
 " WSL Clipboard
 " https://github.com/equalsraf/win32yank/releases {{{
 if(has('wsl'))
@@ -96,9 +93,7 @@ augroup OpenImages
       autocmd BufEnter *.png,*.jpg,*gif exec "! feh ".expand("%" ) | :bwipeout
 augroup END
 "highlight yank
-if has('nvim')
-    au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=40}
-endif
+au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=40}
 
 "---------------COMMANDS
 "remove M^ characters
