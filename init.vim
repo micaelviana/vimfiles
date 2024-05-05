@@ -93,7 +93,7 @@ augroup OpenImages
       autocmd BufEnter *.png,*.jpg,*gif exec "! feh ".expand("%" ) | :bwipeout
 augroup END
 "highlight yank
-au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=40}
+autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch"}
 
 "---------------COMMANDS
 "remove M^ characters
