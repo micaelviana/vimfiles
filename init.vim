@@ -143,8 +143,8 @@ noremap <Del> "_x
 let g:sonokai_style = 'default'
 let g:sonokai_better_performance = 1
 let g:everforest_better_performance = 1
-if !empty($vimcolor)
-    colorscheme $vimcolor
+if !empty($vimcolors)
+    colorscheme $vimcolors
 else
     colorscheme nordfox
 endif
