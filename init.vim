@@ -9,6 +9,7 @@ endif
 "List of plugins
 call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'} 
+    Plug 'numToStr/Comment.nvim'
     Plug 'EdenEast/nightfox.nvim'
     Plug 'bluz71/vim-nightfly-colors', { 'as': 'nightfly' }
     Plug 'sainnhe/sonokai'
@@ -27,7 +28,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-treesitter/nvim-treesitter' 
     Plug 'mg979/vim-visual-multi', {'branch': 'master'} 
     Plug 'psliwka/vim-smoothie' 
-    Plug 'tpope/vim-commentary' 
     Plug 'tpope/vim-fugitive'
     Plug 'haya14busa/is.vim' 
     Plug 'honza/vim-snippets' 
@@ -37,7 +37,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-tree/nvim-web-devicons'
 call plug#end()
 "----------END (PLUGIN MANAGER)
-
 
 "----------GENERAL----------
 set hidden "Keep multiple buffers open
