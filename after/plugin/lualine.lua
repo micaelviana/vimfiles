@@ -20,8 +20,14 @@ require('lualine').setup {
   sections = {
       lualine_a = { 'g:coc_status', 'bo:filetype' } ,
       lualine_b = {'branch', 'diff', 'diagnostics'},
-      lualine_c = {'filename'},
-      lualine_x = {'encoding', 'fileformat', 'filetype'},
+        lualine_c = {
+            {
+                "filename",
+                file_status = true,
+                path = 2 -- 0 = just filename, 1 = relative path, 2 = absolute path
+            },
+        },
+        lualine_x = { 'encoding', 'fileformat', 'filetype' },
       lualine_y = {'progress'},
       lualine_z = {'location'}
   },
