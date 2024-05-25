@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'lukas-reineke/indent-blankline.nvim'
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'phaazon/hop.nvim' 
+    Plug 'windwp/nvim-autopairs'
     Plug 'tpope/vim-sensible' 
     Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
     Plug 'nvim-tree/nvim-tree.lua'
