@@ -14,15 +14,14 @@ call plug#begin('~/.vim/plugged')
     Plug 'bluz71/vim-nightfly-colors', { 'as': 'nightfly' }
     Plug 'sainnhe/sonokai'
     Plug 'rose-pine/neovim', { 'as': 'rose-pine'}
+    Plug 'kylechui/nvim-surround',
     Plug 'sainnhe/everforest'
     Plug 'lukas-reineke/indent-blankline.nvim'
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'phaazon/hop.nvim' 
-    Plug 'windwp/nvim-autopairs'
     Plug 'tpope/vim-sensible' 
     Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
     Plug 'nvim-tree/nvim-tree.lua'
-    Plug 'tpope/vim-surround'
     Plug 'nvim-pack/nvim-spectre'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
     Plug 'nvim-lua/plenary.nvim'
@@ -38,6 +37,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-tree/nvim-web-devicons'
 call plug#end()
 "----------END (PLUGIN MANAGER)
+inoremap <expr> <CR> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+lua require ("nvim-surround").setup()
 
 "----------GENERAL----------
 set hidden "Keep multiple buffers open
