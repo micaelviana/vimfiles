@@ -37,8 +37,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-tree/nvim-web-devicons'
 call plug#end()
 "----------END (PLUGIN MANAGER)
-inoremap <expr> <CR> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-lua require ("nvim-surround").setup()
 
 "----------GENERAL----------
 set hidden "Keep multiple buffers open
@@ -119,6 +117,8 @@ nnoremap <silent><leader>q :xa <cr>
 nnoremap <silent> \w :w <cr>
 nnoremap <silent> \q :xa <cr>
 nnoremap <silent> \z :xa <cr>
+"close without save
+nnoremap <silent> Q :qa! <cr>
 "make executable
 nnoremap <silent><space>x :!chmod +x %<cr>
 "paste in insert mode using Ctrl+V
