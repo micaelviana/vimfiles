@@ -14,7 +14,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'bluz71/vim-nightfly-colors', { 'as': 'nightfly' }
     Plug 'sainnhe/sonokai'
     Plug 'rose-pine/neovim', { 'as': 'rose-pine'}
-    Plug 'kylechui/nvim-surround',
     Plug 'sainnhe/everforest'
     Plug 'lukas-reineke/indent-blankline.nvim'
     Plug 'nvim-lualine/lualine.nvim'
