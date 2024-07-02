@@ -37,6 +37,11 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 "----------END (PLUGIN MANAGER)
 
+  augroup python_autocmds
+    autocmd!
+    autocmd FileType python setlocal autoindent expandtab tabstop=2 softtabstop=2 shiftwidth=2
+  augroup END
+
 "----------GENERAL----------
 set hidden "Keep multiple buffers open
 set number relativenumber "Display line numbers
@@ -47,7 +52,7 @@ set inc=split "command preview
 set splitright splitbelow "define which way the splits open
 set clipboard+=unnamedplus "Copy/paste between vim and other programs.
 "indentation
-set autoindent
+set smartindent
 set expandtab
 set tabstop=4
 set softtabstop=4
