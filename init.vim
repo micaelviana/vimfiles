@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'EdenEast/nightfox.nvim'
     Plug 'bluz71/vim-nightfly-colors', { 'as': 'nightfly' }
     Plug 'sainnhe/sonokai'
+    Plug 'rebelot/kanagawa.nvim'
     Plug 'rose-pine/neovim', { 'as': 'rose-pine'}
     Plug 'sainnhe/everforest'
     Plug 'lukas-reineke/indent-blankline.nvim'
