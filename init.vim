@@ -38,13 +38,9 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 "----------END (PLUGIN MANAGER)
 
-  augroup python_autocmds
-    autocmd!
-    autocmd FileType python setlocal autoindent expandtab tabstop=2 softtabstop=2 shiftwidth=2
-  augroup END
-
 "----------GENERAL----------
 set hidden "Keep multiple buffers open
+set confirm "ask to save files before quitting
 set number relativenumber "Display line numbers
 set cursorline "highlit cursor line
 set mouse=a "enable mouse interaction
